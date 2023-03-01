@@ -1,39 +1,19 @@
 <template>
   <article>
     <div class="article-content-wrapper">
-      <ArticleTitle
-        child-class="left"
-        :h1text="details.title"
-        :h2text="details.subtitle"
-      />
+      <ArticleTitle child-class="left" :h1text="details.title" :h2text="details.subtitle" />
       <section v-if="details.hasCaseStudy" class="case-study">
         <ArticleTitle child-class="right" h1text="Case Study" h2text=" " />
         <Carousel></Carousel>
       </section>
-      <ArticleSection
-        :paragraphs="details.summary.paragraphs"
-        :img-path="details.summary.imgPath"
-        section-type="summary"
-      />
-      <ArticleTools
-        :libs="details.libs"
-        :langs="details.langs"
-        :demo-url="details.demoUrl"
-        :codebase-url="details.codebaseUrl"
-        :designs-url="details.designsUrl"
-        :blog-url="details.blogUrl"
-      />
+      <ArticleSection :paragraphs="details.summary.paragraphs" :img-path="details.summary.imgPath"
+        section-type="summary" />
+      <ArticleTools :libs="details.libs" :langs="details.langs" :demo-url="details.demoUrl"
+        :codebase-url="details.codebaseUrl" :designs-url="details.designsUrl" :blog-url="details.blogUrl" />
 
       <div class="article-paras-wrapper">
-        <ArticleSection
-          v-for="(article, i) in details.articles"
-          :key="i"
-          :paragraphs="article.paragraphs"
-          :img-path="article.imgPath"
-          :img-caption="article.imgCaption"
-          :img-alt="article.imgAlt"
-          section-type="para"
-        />
+        <ArticleSection v-for="(article, i) in details.articles" :key="i" :paragraphs="article.paragraphs"
+          :img-path="article.imgPath" :img-caption="article.imgCaption" :img-alt="article.imgAlt" section-type="para" />
       </div>
       <div class="top-button">
         <button class="return-home-up" @click="slide('top', 'first')"></button>
@@ -90,13 +70,12 @@ article {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows:
-    6rem minmax(8rem, auto) minmax(8rem, auto) minmax(14rem, auto)
-    minmax(8rem, auto);
+    6rem minmax(8rem, auto) minmax(8rem, auto) minmax(14rem, auto) minmax(8rem, auto);
   grid-template-areas: 'title title button' 'row1 row1 row1' 'row2 row2 row2' 'row3 row3 row3' 'row4 row4 row4';
   row-gap: 3rem;
 }
 
-article > .article-content-wrapper,
+article>.article-content-wrapper,
 .top-button {
   background-image: url('~/assets/images/bg/page-nav-bg-white.png');
   background-repeat: repeat-y;
@@ -120,15 +99,16 @@ article .summary.article-section {
   grid-area: row1;
   flex-wrap: wrap;
   justify-content: center;
-  grid-gap: 10px;
+  grid-gap: var(--margin-y);
+  margin-top: calc(-1 * var(--margin-y));
 }
 
-.article-content-wrapper > section.case-study {
+.article-content-wrapper>section.case-study {
   grid-row: auto;
   grid-column: -2 / -1;
 }
 
-.article-content-wrapper > section.case-study.active {
+.article-content-wrapper>section.case-study.active {
   grid-column: 1 / -1;
 }
 
@@ -155,6 +135,10 @@ article .article-tools {
 @media only screen and (max-width: 1280px) {
   .section.article-section.para {
     margin-bottom: 0;
+  }
+
+  article .summary.article-section {
+    margin-top: calc(-1 * var(--margin-y));
   }
 
   .case-study header {

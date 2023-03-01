@@ -9,33 +9,33 @@
 </template>
 
 <script>
-import ContactForm from '../ContactForm.vue'
+import ContactForm from "../ContactForm.vue";
 export default {
-  components: {
-    ContactForm,
-  },
   props: {
     slide: Function,
   },
   methods: {
     scrollHome: function () {
-      document.querySelector('section.anim-to-nav').scrollIntoView()
-    },
+      document.querySelector('section.anim-to-nav').scrollIntoView();
+    }
   },
+  components: {
+    ContactForm
+  }
 }
 </script>
 <style scoped>
 /* Contact form */
 #contact-wrapper h1 {
   margin-top: 1rem;
-  font-family: 'Londrina Solid', 'Roboto', 'Arial', 'sans-serif';
+  font-family: "Londrina Solid", "Roboto", "Arial", "sans-serif";
   font-size: 5.0625em;
   font-weight: 400;
   text-transform: capitalize;
   line-height: 5.375rem;
   width: 50%;
   text-align: left;
-  color: #3c3c3c;
+  color: #3C3C3C;
   filter: sepia(1);
 }
 
@@ -53,6 +53,6 @@ button#return-home {
 
 button#return-home:hover {
   right: -1rem;
-  top: calc(var(--margin-y) - 0.5rem);
+  top: calc(var(--margin-y) - .5rem);
 }
 </style>

@@ -1,13 +1,19 @@
 <template>
   <Layout>
-    <template :v-if="isMobile" #nav>
+    <Logo></Logo>
+    <template v-if="isMobile" #nav>
       <HamburgerNav :switch-page="switchPage"></HamburgerNav>
     </template>
-    <template :v-if="isMobile" #hero>
+    <template v-if="isMobile" #hero>
       <Hero heading="I make amazing interactive web experiences" button-text="Book Me"
         subheading="Lets talk about your next project"></Hero>
     </template>
-    <template #animation>
+    <template v-if="isMobile" #static-knife>
+      <div id="animation-wrapper-static">
+        <StaticNavSvg />
+      </div>
+    </template>
+    <template v-else #animation>
       <section class="anim-to-nav">
         <AnimationWrapper :switch-to-layer="switchToLayer" :hover-layer-active="hoverLayerActive">
           <template #sub-nav>
@@ -31,13 +37,13 @@
 </template>
 
 <script>
-import { ref, computed } from 'vue'
-
 import Layout from '../components/Layout/Layout.vue'
+import Logo from '../components/Logo.vue'
 import HamburgerNav from '../components/Layout/HamburgerNav.vue'
 import SubNav from '../components/Layout/SubNav.vue'
 import Hero from '../components/Layout/Hero.vue'
 import AnimationWrapper from '../components/Animation/AnimationWrapper.vue'
+import StaticNavSvg from '../components/Animation/StaticNavSvg.vue'
 import Header from '../components/Header.vue'
 import Article from '../components/Article/Article.vue'
 import ContactSection from '../components/Layout/Contact.vue'
@@ -48,46 +54,43 @@ import projectHeaders from './headerData.js'
 export default {
   components: {
     Layout,
+    Logo,
     HamburgerNav,
     SubNav,
+    StaticNavSvg,
     Hero,
     AnimationWrapper,
     Header,
     Article,
     ContactSection,
   },
-  setup() {
-    const headerTitles = ref(projectHeaders.web3)
-    function getHeaderTitles(pageName) {
-      // Header state variables
-      headerTitles.value = projectHeaders[pageName]
-    }
-
-    // // First articles title state
-    // const activeFirstSection = computed(
-    //     () => activeLayer.value === hoveredLayer.value
-    // )
-  },
-
   data() {
     return {
       currentHeaderChangeSetTimeout: 1,
       headerTitles: projectHeaders.web3,
-      activeLayer: 'default',
       hoveredLayer: 'web3',
-      activeLayer: 'default',
+      activeLayer: 'web3',
     }
   },
   computed: {
     isMobile() {
-      return this.isMobile
+      return !(this.$device.isMobile || this.$device.isTablet)
+    },
+    isDesktop() {
+      return (this.$device.isDesktop)
     },
     activeProjects() {
       return (
-        ['web3', 'ecommerce', 'elearning'].includes(this.activeLayer.value) &&
-        projects[this.activeLayer.value]
+        ['web3', 'ecommerce', 'elearning'].includes(this.activeLayer) &&
+        projects[this.activeLayer]
       )
     },
+    // // First articles title state
+    activeFirstSection() { return this.activeLayer === this.hoveredLayer },
+
+    setHeaderTitles(pageName) {
+      this.headerTitles = this.projectHeaders[pageName]
+    }
   },
   mounted() {
     const options = {
@@ -112,7 +115,7 @@ export default {
     },
     // Desktop
     switchToLayer(layerName) {
-      getHeaderTitles(layerName)
+      setHeaderTitles(layerName)
       document.querySelectorAll('.bg-svg')[0].classList.remove('active')
       document.querySelectorAll('.bg-svg')[1].classList.remove('active')
       document.querySelectorAll('.bg-svg')[2].classList.add('active')
@@ -125,7 +128,7 @@ export default {
       clearTimeout(this.currentHeaderChangeSetTimeout)
       this.currentHeaderChangeSetTimeout = setTimeout(
         () => {
-          getHeaderTitles(layerName)
+          setHeaderTitles(layerName)
         },
         layerName !== this.activeLayer.value ? 0 : 0
       )
@@ -201,7 +204,8 @@ export default {
 }
 </script>
 <style scoped>
-.anim-to-nav {
+.anim-to-nav,
+.anim-to-nav>div {
   padding: 0;
 }
 </style>

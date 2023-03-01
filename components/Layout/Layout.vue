@@ -30,8 +30,10 @@ body,
 
 /* Default styles */
 :root {
+  --hero-height: 50vh;
   --margin-x: 1rem;
-  --gutter-x: 2.5rem;
+  --gutter-x: 0;
+  --gutter-x-right: 1rem;
   --margin-y: 1rem;
   --h1-line-height: 1.2;
   --h2-line-height: 1.1;
@@ -65,17 +67,17 @@ body,
   gap: var(--margin-x) var(--margin-y);
 }
 
-main > * {
+main>* {
   flex: 1 0 100%;
   margin: 0;
   padding: 0;
 }
 
-main > section:not(.anim-to-nav) {
+main>section:not(.anim-to-nav) {
   padding: 0 var(--margin-x);
 }
 
-section > * {
+section[slot^=[section-]]>* {
   margin: 0;
   padding: var(--section-padding, 1rem);
   font-size: var(--section-font-size, 1rem);
@@ -119,7 +121,8 @@ button#skip-intro:hover {
 @media (min-width: 1280px) {
   :root {
     --margin-x: calc(((var(--svg-x) / 1280) * 100vw));
-    --margin-y: 3rem;
+    --gutter-x: 2.5rem;
+    --margin-y: 1rem;
     --h1-line-height: 1.4;
     --h2-line-height: 1.3;
     --h1-margin: 4rem 0 3rem;
@@ -127,7 +130,7 @@ button#skip-intro:hover {
     --header-padding: 0 6rem;
   }
 
-  main > section:not(.anim-to-nav) {
+  main>section:not(.anim-to-nav) {
     padding: 0 var(--margin-x);
   }
 
@@ -147,7 +150,7 @@ button#skip-intro:hover {
 /* Extra large viewport */
 @media (min-width: 1680px) {
   :root {
-    --margin-x: calc((100vw - var(--svg-max-w-px)) / 2 + 1.3 * var(--svg-x-px));
+    --margin-x: calc((100vw - var(--svg-max-w-px)) / 2 + 1.2 * var(--svg-x-px));
     --header-left: calc(var(--margin-x) + 400px);
 
     --margin-y: 4rem;

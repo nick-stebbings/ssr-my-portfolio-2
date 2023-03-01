@@ -1,32 +1,14 @@
 <template>
   <header :class="computedHeaderClass">
-    <h1 :class="computedHeaderClass" :data-val="headerTitles['h1']">
-      {{ headerTitles['h1'] }}
-    </h1>
+    <h1 :class="computedHeaderClass" :data-val="headerTitles['h1']">{{ headerTitles['h1'] }}</h1>
     <h2 :class="computedHeaderClass">{{ headerTitles['h2'] }}</h2>
     <div class="header-container">
-      <h3 v-for="h3 in headerTitles['h3']" :class="computedHeaderClass">
-        {{ h3.p }}<span class="header-link">{{ h3.span }}</span
-        >...
+      <h3 :class="computedHeaderClass" v-for="h3 in headerTitles['h3']">
+        {{ h3.p }}<span class="header-link">{{ h3.span }}</span>...
       </h3>
     </div>
   </header>
 </template>
-<script>
-export default {
-  props: {
-    hoveredLayer: String,
-    activeLayer: String,
-    headerTitles: Object,
-  },
-  computed: {
-    computedHeaderClass() {
-      return this.activeLayer === this.hoveredLayer ? 'active' : 'inactive'
-    },
-  },
-}
-</script>
-
 <style scoped>
 header {
   display: flex;
@@ -55,7 +37,7 @@ header .header-container {
 h1,
 h2 {
   margin: 0;
-  color: #3c3c3c;
+  color: #3C3C3C;
   opacity: 0.85;
   text-align: center;
   padding: var(--header-padding);
@@ -64,11 +46,11 @@ h2 {
 h2,
 h3,
 form label {
-  font-family: 'Rubik', 'Roboto', 'Arial', 'sans-serif';
+  font-family: "Rubik", "Roboto", "Arial", "sans-serif";
 }
 
 h1 {
-  font-family: 'Londrina Solid', 'Roboto', 'Arial', 'sans-serif';
+  font-family: "Londrina Solid", "Roboto", "Arial", "sans-serif";
   /* font-size: 5.0625em; 81.5px */
   font-size: 3.375em;
   /* 54px */
@@ -78,7 +60,7 @@ h1 {
   text-transform: capitalize;
   margin-bottom: 1rem;
   line-height: 3.375rem;
-  transition: 0.8s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: .8s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 h2 {
@@ -91,7 +73,7 @@ h2 {
 }
 
 h3 {
-  color: #3c3c3c;
+  color: #3C3C3C;
   filter: brightness();
   font-size: 1em;
   /* 16px */
@@ -104,7 +86,7 @@ h3 {
 
 h3 span {
   transition: all 0.3s;
-  color: #303c6c;
+  color: #303C6C;
   font-weight: 600;
 }
 
@@ -127,7 +109,7 @@ h3.inactive span {
 }
 
 h1.inactive {
-  animation-duration: 0.3s;
+  animation-duration: .3s;
   animation-delay: 0s;
   transition: 0s margin-top ease-in;
 }
@@ -146,6 +128,7 @@ h1.inactive {
 }
 
 @media (min-width: 1281px) {
+
   h1 {
     font-size: 7.59375em;
   }
@@ -166,6 +149,7 @@ h1.inactive {
 }
 
 @media (min-width: 1440px) {
+
   h1,
   h2 {
     /* margin-bottom: 5.0625rem; */
@@ -232,3 +216,18 @@ h1.inactive {
   }
 }
 </style>
+
+<script>
+export default {
+  props: {
+    hoveredLayer: String,
+    activeLayer: String,
+    headerTitles: Object,
+  },
+  computed: {
+    computedHeaderClass() {
+      return this.activeLayer === this.hoveredLayer ? "active" : "inactive"
+    },
+  }
+}
+</script>

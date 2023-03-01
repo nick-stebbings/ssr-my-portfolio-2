@@ -1,12 +1,11 @@
 <template>
-  <div class="container-fluid px-0">
-    <div class="row align-items-center text-center text-md-start">
-      <div class="col-md-12 col-lg-8 col-xl-7">
-        <h1 class="display-4">{{ heading }}</h1>
-        <h2 class="lead my-4">{{ subheading }}</h2>
-        <a href="#" class="btn btn-primary btn-lg">{{ buttonText }}</a>
-      </div>
+  <div class="hero-container">
+    <div>
+      <h1 class="display-4">{{ heading }}</h1>
+      <h2 class="lead my-4">{{ subheading }}</h2>
+      <a href="#" class="btn btn-primary btn-lg">{{ buttonText }}</a>
     </div>
+
   </div>
 </template>
 
@@ -16,32 +15,51 @@ export default {
   props: {
     heading: {
       type: String,
-      required: true,
+      required: true
     },
     subheading: {
       type: String,
-      required: true,
+      required: true
     },
     buttonText: {
       type: String,
-      default: 'Book Me',
-    },
-  },
+      default: 'Book Me'
+    }
+  }
 }
 </script>
+
 
 <style scoped>
 div {
   background: transparent;
 }
 
-div.container-fluid {
+div.hero-container {
+  min-height: var(--hero-height);
+  /* margin-top: var(--margin-top); */
+  padding: 0 var(--margin-x) 0 var(--header-left);
+}
+
+h1.display-4,
+h2 {
+  text-align: right;
+}
+
+div.hero-container>div {
   position: absolute;
-  top: 4rem;
-  padding: var(--margin-top) var(--gutter-x) 0 var(--gutter-x);
+  top: 3.5rem;
+  padding: 0 var(--margin-x);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 @media (min-width: 1280px) {
+  div.container-fluid {
+    padding: 0 var(--margin-x) 0 var(--header-left);
+  }
+
   h1.display-4 {
     font-size: 4rem;
   }

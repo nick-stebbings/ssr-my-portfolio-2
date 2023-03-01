@@ -18,20 +18,20 @@
 
 <script>
 export default {
-  props: {
-    switchPage: Function,
-  },
   data() {
     return {
       navOpen: false,
-    }
+    };
+  },
+  props: {
+    switchPage: Function,
   },
   methods: {
     toggleNav() {
-      this.navOpen = !this.navOpen
+      this.navOpen = !this.navOpen;
     },
   },
-}
+};
 </script>
 
 <style>
@@ -83,6 +83,8 @@ export default {
     color: #3c3c3c;
     text-decoration: none;
     transition: color 0.2s ease-in-out;
+    text-align: right;
+    padding-right: var(--margin-x);
   }
 
   .nav-menu a:hover {
@@ -97,7 +99,6 @@ export default {
     width: 2rem;
     height: 1.5rem;
     cursor: pointer;
-    margin-right: var(--margin-x);
   }
 
   .hamburger-icon span {

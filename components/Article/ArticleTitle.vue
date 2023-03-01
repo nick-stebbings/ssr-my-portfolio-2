@@ -168,10 +168,11 @@ header.article-title.left h2 {
 }
 
 @media (min-width: 1280px) {
+
   header.article-title.right h1,
   header.article-title.right h2 {
     padding-right: 0;
-    min-height: 2rem;
+    /* min-height: 2rem; */
     margin: 1.5rem 0;
     text-align: right;
   }

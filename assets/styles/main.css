@@ -1,25 +1,19 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Ropa+Sans&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid&family=Rubik:wght@300;400;500;600&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-:root {
-}
-
 /* Buttons */
-button#return-home,
-button.return-home-up,
-button#skip-intro {
+button#return-home, button.return-home-up, button#skip-intro {
   position: absolute;
   border: 0;
   height: 4rem;
   width: 4rem;
   cursor: pointer;
   background-color: transparent;
-  background-image: url('~assets/images/icons/down-icon.png');
+  background-image: url("assets/images/icons/down-icon.png");
   background-repeat: no-repeat;
-  transition: all 0.3s;
+  transition: all .3s;
 }
-button#return-home,
-button.return-home-up {
+button#return-home, button.return-home-up {
   background-color: #846b63;
   background-size: 3rem;
   background-position: center;
@@ -28,7 +22,7 @@ button.return-home-up {
 
 button.return-home-up {
   padding: 0 !important;
-  background-image: url('~assets/images/icons/up-icon.png');
+  background-image: url("assets/images/icons/up-icon.png");
   opacity: 0;
   visibility: hidden;
   position: relative;
@@ -39,10 +33,9 @@ button.return-home-up:hover {
   top: -1rem;
 }
 
-button#return-home:hover,
-button.return-home-up:hover,
-button#skip-intro:hover {
-  border: 2px dashed #846b63;
+
+button#return-home:hover, button.return-home-up:hover, button#skip-intro:hover {
+  border: 2px dashed #846B63;
   padding: 1rem;
   height: 6rem;
   width: 6rem;
@@ -52,27 +45,27 @@ button#skip-intro:hover {
 
 @keyframes fade-in {
   0% {
-    opacity: 0;
-    color: transparent;
-    text-shadow: 0 0 45px rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      color: transparent;
+      text-shadow: 0 0 45px rgba(0,0,0,0.5);
   }
   50% {
-    color: transparent;
-    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      color: transparent;
+      text-shadow: 0 0 15px rgba(0,0,0,0.5);
   }
   100% {
-    opacity: 1;
-    color: #3c3c3c;
-    text-shadow: none;
+      opacity: 1;
+      color: #3C3C3C;
+      text-shadow: none;
   }
 }
 @keyframes fade-out {
   0% {
-    color: #3c3c3c;
-    text-shadow: none;
+      color: #3C3C3C;
+      text-shadow: none;
   }
   100% {
-    color: transparent;
-    text-shadow: 0 0 45px rgba(0, 0, 0, 0.5);
+      color: transparent;
+      text-shadow: 0 0 45px rgba(0,0,0,0.5);
   }
 }

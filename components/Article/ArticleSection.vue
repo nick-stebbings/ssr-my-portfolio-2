@@ -64,7 +64,7 @@ section.article-section.paras {
 }
 
 section.article-section.para:nth-of-type(2n + 1) {
-  padding: 0 0 0 3rem;
+  padding: 0 var(--gutter-x-right) 0 var(--gutter-x);
 }
 
 section.article-section .copy {
@@ -81,7 +81,7 @@ section.page:nth-of-type(2n + 1) article section.summary.article-section {
 }
 
 .page article .article-section.para {
-  flex-direction: column;
+  flex-direction: column !important;
 }
 
 section.page:nth-of-type(2n + 1) article section.summary.article-section .copy {
@@ -89,9 +89,10 @@ section.page:nth-of-type(2n + 1) article section.summary.article-section .copy {
 }
 
 .article-section .figure {
-  padding: var(--margin-y) var(--gutter-x) 0 var(--gutter-x);
+  padding: var(--margin-y) var(--gutter-x-right) var(--margin-y) var(--gutter-x);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   color: #3c3c3c;
   font-size: 1rem;
   letter-spacing: 1px;

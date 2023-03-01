@@ -3,20 +3,10 @@
     <button id="skip-intro" @click="skipToNav()"></button>
     <div id="animation-wrapper">
       <AnimationScene1 :class="animationScene1Class" />
-      <AnimationGlowingNLoopScene
-        v-show="glowingNLoopSceneVisible"
-        :launch="launch2"
-      />
+      <AnimationGlowingNLoopScene v-show="glowingNLoopSceneVisible" :launch="launch2" />
       <AnimationScene2 v-show="intro2Visible" :launch="launch3" />
       <AnimationMainLoopScene v-show="mainLoopVisible" :launch="launch4" />
-      <AnimationNavScene
-        v-show="navVisible"
-        :hover-layer-active="hoverLayerActive"
-        :switch-to-layer="switchToLayer"
-      />
-    </div>
-    <div id="animation-wrapper-static">
-      <StaticNavSvg />
+      <AnimationNavScene v-show="navVisible" :hover-layer-active="hoverLayerActive" :switch-to-layer="switchToLayer" />
     </div>
     <slot name="sub-nav"></slot>
   </div>
@@ -28,7 +18,6 @@ import AnimationGlowingNLoopScene from './AnimationGlowingNLoopScene.vue'
 import AnimationScene2 from './AnimationScene2.vue'
 import AnimationMainLoopScene from './AnimationMainLoopScene.vue'
 import AnimationNavScene from './AnimationNavScene.vue'
-import StaticNavSvg from './StaticNavSvg.vue'
 
 export default {
   components: {
@@ -37,7 +26,6 @@ export default {
     AnimationScene2,
     AnimationMainLoopScene,
     AnimationNavScene,
-    StaticNavSvg,
   },
   props: {
     switchToLayer: Function,
@@ -183,11 +171,13 @@ export default {
 
 #animation-wrapper-static {
   display: block;
+  position: absolute;
+  min-height: var(--hero-height);
   padding: 0;
   margin-top: calc(-1 * var(--margin-x));
 }
 
-#animation-wrapper > svg {
+#animation-wrapper>svg {
   overflow: initial;
   width: 100%;
   max-width: 1680px;

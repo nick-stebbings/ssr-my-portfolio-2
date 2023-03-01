@@ -1,177 +1,62 @@
 <script setup></script>
 <template>
-  <div
-    id="case-study-carousel"
-    class="carousel slide"
-    data-bs-interval="false"
-    data-bs-ride="true"
-  >
+  <div id="case-study-carousel" class="carousel slide" data-bs-interval="false" data-bs-ride="true">
     <div class="carousel-indicators">
-      <button
-        type="button"
-        data-bs-target="#case-study-carousel"
-        data-bs-slide-to="0"
-        class="active"
-        aria-current="true"
-        aria-label="Slide 1"
-      ></button>
-      <button
-        type="button"
-        data-bs-target="#case-study-carousel"
-        data-bs-slide-to="1"
-        aria-label="Slide 2"
-      ></button>
-      <button
-        type="button"
-        data-bs-target="#case-study-carousel"
-        data-bs-slide-to="2"
-        aria-label="Slide 3"
-      ></button>
-      <button
-        type="button"
-        data-bs-target="#case-study-carousel"
-        data-bs-slide-to="3"
-        aria-label="Slide 4"
-      ></button>
-      <button
-        type="button"
-        data-bs-target="#case-study-carousel"
-        data-bs-slide-to="4"
-        aria-label="Slide 5"
-      ></button>
-      <button
-        type="button"
-        data-bs-target="#case-study-carousel"
-        data-bs-slide-to="5"
-        aria-label="Slide 6"
-      ></button>
-      <button
-        type="button"
-        data-bs-target="#case-study-carousel"
-        data-bs-slide-to="6"
-        aria-label="Slide 7"
-      ></button>
-      <button
-        type="button"
-        data-bs-target="#case-study-carousel"
-        data-bs-slide-to="7"
-        aria-label="Slide 8"
-      ></button>
-      <button
-        type="button"
-        data-bs-target="#case-study-carousel"
-        data-bs-slide-to="8"
-        aria-label="Slide 9"
-      ></button>
-      <button
-        type="button"
-        data-bs-target="#case-study-carousel"
-        data-bs-slide-to="9"
-        aria-label="Slide 10"
-      ></button>
-      <button
-        type="button"
-        data-bs-target="#case-study-carousel"
-        data-bs-slide-to="10"
-        aria-label="Slide 11"
-      ></button>
+      <button type="button" data-bs-target="#case-study-carousel" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#case-study-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#case-study-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#case-study-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#case-study-carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      <button type="button" data-bs-target="#case-study-carousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+      <button type="button" data-bs-target="#case-study-carousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+      <button type="button" data-bs-target="#case-study-carousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+      <button type="button" data-bs-target="#case-study-carousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
+      <button type="button" data-bs-target="#case-study-carousel" data-bs-slide-to="9" aria-label="Slide 10"></button>
+      <button type="button" data-bs-target="#case-study-carousel" data-bs-slide-to="10" aria-label="Slide 11"></button>
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img
-          src="~/assets/images/casestudyframes/habitfract1/1.png"
-          class="d-block w-100"
-          alt="App screens Slide"
-        />
+        <img src="~/assets/images/casestudyframes/habitfract1/1.png" class="d-block w-100" alt="App screens Slide" />
       </div>
       <div class="carousel-item">
-        <img
-          src="~/assets/images/casestudyframes/habitfract1/2.png"
-          class="d-block w-100"
-          alt="Title Slide"
-        />
+        <img src="~/assets/images/casestudyframes/habitfract1/2.png" class="d-block w-100" alt="Title Slide" />
       </div>
       <div class="carousel-item">
-        <img
-          src="~/assets/images/casestudyframes/habitfract1/3.png"
-          class="d-block w-100"
-          alt="Overview Slide"
-        />
+        <img src="~/assets/images/casestudyframes/habitfract1/3.png" class="d-block w-100" alt="Overview Slide" />
       </div>
       <div class="carousel-item">
-        <img
-          src="~/assets/images/casestudyframes/habitfract1/4.png"
-          class="d-block w-100"
-          alt="Structure Slide"
-        />
+        <img src="~/assets/images/casestudyframes/habitfract1/4.png" class="d-block w-100" alt="Structure Slide" />
       </div>
       <div class="carousel-item">
-        <img
-          src="~/assets/images/casestudyframes/habitfract1/5.png"
-          class="d-block w-100"
-          alt="Problem Slide"
-        />
+        <img src="~/assets/images/casestudyframes/habitfract1/5.png" class="d-block w-100" alt="Problem Slide" />
       </div>
       <div class="carousel-item">
-        <img
-          src="~/assets/images/casestudyframes/habitfract1/6.png"
-          class="d-block w-100"
-          alt="Problem Slide"
-        />
+        <img src="~/assets/images/casestudyframes/habitfract1/6.png" class="d-block w-100" alt="Problem Slide" />
       </div>
       <div class="carousel-item">
-        <img
-          src="~/assets/images/casestudyframes/habitfract1/7.png"
-          class="d-block w-100"
-          alt="Constraints Slide"
-        />
+        <img src="~/assets/images/casestudyframes/habitfract1/7.png" class="d-block w-100" alt="Constraints Slide" />
       </div>
       <div class="carousel-item">
-        <img
-          src="~/assets/images/casestudyframes/habitfract1/8.png"
-          class="d-block w-100"
-          alt="Desired Outcomes Slide"
-        />
+        <img src="~/assets/images/casestudyframes/habitfract1/8.png" class="d-block w-100" alt="Desired Outcomes Slide" />
       </div>
       <div class="carousel-item">
-        <img
-          src="~/assets/images/casestudyframes/habitfract1/9.png"
-          class="d-block w-100"
-          alt="Solutions Slide"
-        />
+        <img src="~/assets/images/casestudyframes/habitfract1/9.png" class="d-block w-100" alt="Solutions Slide" />
       </div>
       <div class="carousel-item">
-        <img
-          src="~/assets/images/casestudyframes/habitfract1/10.png"
-          class="d-block w-100"
-          alt="Solutions Slide"
-        />
+        <img src="~/assets/images/casestudyframes/habitfract1/10.png" class="d-block w-100" alt="Solutions Slide" />
       </div>
       <div class="carousel-item">
-        <img
-          src="~/assets/images/casestudyframes/habitfract1/11.png"
-          class="d-block w-100"
-          alt="Summary Slide"
-        />
+        <img src="~/assets/images/casestudyframes/habitfract1/11.png" class="d-block w-100" alt="Summary Slide" />
       </div>
     </div>
-    <button
-      class="carousel-control-prev"
-      type="button"
-      data-bs-target="#case-study-carousel"
-      data-bs-slide="prev"
-    >
-      <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span> -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#case-study-carousel" data-bs-slide="prev">
+    <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span> -->
     </button>
-    <button
-      class="carousel-control-next"
-      type="button"
-      data-bs-target="#case-study-carousel"
-      data-bs-slide="next"
-    >
-      <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span> -->
+    <button class="carousel-control-next" type="button" data-bs-target="#case-study-carousel" data-bs-slide="next">
+    <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span> -->
     </button>
   </div>
 </template>
@@ -217,14 +102,15 @@
   overflow: hidden;
   transition: 0.3s all ease-out;
   padding-bottom: 2rem;
+  margin-left: 5rem;
 }
 
-.case-study > header.active + .carousel {
+.case-study>header.active+.carousel {
   overflow: initial;
   margin-left: 0;
 }
 
-.case-study > .article-title.active + .carousel .carousel-indicators {
+.case-study>.article-title.active+.carousel .carousel-indicators {
   left: 0;
 }
 
