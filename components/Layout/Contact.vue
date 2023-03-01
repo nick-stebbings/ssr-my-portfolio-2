@@ -26,8 +26,12 @@ export default {
 </script>
 <style scoped>
 /* Contact form */
+#contact {
+  background-color: #3c3c3c;
+}
+
 #contact-wrapper h1 {
-  margin-top: 1rem;
+  margin: var(--margin-y) 0;
   font-family: "Londrina Solid", "Roboto", "Arial", "sans-serif";
   font-size: 5.0625em;
   font-weight: 400;
@@ -35,7 +39,7 @@ export default {
   line-height: 5.375rem;
   width: 50%;
   text-align: left;
-  color: #3C3C3C;
+  color: #fefefe;
   filter: sepia(1);
 }
 

@@ -7,10 +7,10 @@
     </div>
     <nav class="nav-menu" :class="{ 'is-active': navOpen }">
       <ul>
-        <li><a href="#" @click="switchPage($event)">e-learning</a></li>
-        <li><a href="#" @click="switchPage($event)">e-commerce</a></li>
-        <li><a href="#" @click="switchPage($event)">web3</a></li>
-        <li><a href="#" @click="switchPage($event)">book me</a></li>
+        <li><a href="#" @click="toggleNav() && switchPage($event)">e-learning</a></li>
+        <li><a href="#" @click="toggleNav() && switchPage($event)">e-commerce</a></li>
+        <li><a href="#" @click="toggleNav() && switchPage($event)">web3</a></li>
+        <li><a href="#" @click="toggleNav() && switchPage($event)">book me</a></li>
       </ul>
     </nav>
   </div>
@@ -29,6 +29,7 @@ export default {
   methods: {
     toggleNav() {
       this.navOpen = !this.navOpen;
+      return true;
     },
   },
 };
@@ -41,13 +42,13 @@ export default {
 
 @media only screen and (max-width: 1280px) {
   .hamburger-nav {
+    background-color: transparent;
     display: flex;
     width: 100vw;
     justify-content: flex-end;
     padding: var(--margin-x);
     position: relative;
     z-index: 100;
-    background-color: white;
   }
 
   .nav-menu {

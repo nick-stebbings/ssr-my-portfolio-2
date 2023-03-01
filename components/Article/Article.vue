@@ -16,7 +16,9 @@
           :img-path="article.imgPath" :img-caption="article.imgCaption" :img-alt="article.imgAlt" section-type="para" />
       </div>
       <div class="top-button">
-        <button class="return-home-up" @click="slide('top', 'first')"></button>
+        <button class="return-home-up" @click="slide('top', 'first')">
+          <ArrowCircleUpIcon />
+        </button>
       </div>
     </div>
   </article>
@@ -26,6 +28,7 @@ import ArticleSection from '../Article/ArticleSection.vue'
 import ArticleTitle from '../Article/ArticleTitle.vue'
 import ArticleTools from '../Article/ArticleTools.vue'
 import Carousel from '../Carousel.vue'
+import { ArrowCircleUpIcon } from "@vue-hero-icons/outline"
 
 export default {
   components: {
@@ -44,7 +47,7 @@ export default {
     const carouselCaseStudies = document.querySelectorAll('.carousel.slide')
     expandCaseStudyBtns.forEach((btn, i) => {
       btn.addEventListener('click', () => {
-        console.log('Expanding case study...')
+        console.log('Expanding case study...', expandCaseStudyBtns)
         carouselCaseStudies[i].style.height = btn.classList.contains('active')
           ? '0'
           : 'auto'
@@ -99,8 +102,7 @@ article .summary.article-section {
   grid-area: row1;
   flex-wrap: wrap;
   justify-content: center;
-  grid-gap: var(--margin-y);
-  margin-top: calc(-1 * var(--margin-y));
+  grid-gap: var(--margin-y)
 }
 
 .article-content-wrapper>section.case-study {

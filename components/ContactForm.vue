@@ -1,25 +1,25 @@
 <template>
   <form name="contact-form" method="POST" action="https://api.web3forms.com/submit" @submit="handleSubmit">
     <input type="hidden" name="access_key" value="3b1f2606-e4c4-4a19-87ae-4e19878c66f8">
-    <div class="form-row col-sm-12 col-lg-9">
-      <div class="form-group col-sm-12 col-lg-9 mt-3">
+    <div class="form-row">
+      <div class="form-group">
         <label for="name">Your Name</label>
         <input required type="text" class="form-control" id="name" name="name">
       </div>
     </div>
-    <div class="form-row col-sm-12 col-lg-9">
-      <div class="form-group col-sm-12 col-lg-9 mt-3">
+    <div class="form-row">
+      <div class="form-group">
         <label for="inputEmail">Email</label>
         <input required type="email" class="form-control" id="inputEmail" name="email">
       </div>
     </div>
-    <div class="form-row col-sm-12 col-lg-9 mt-3">
-      <div class="form-group col-md-12">
+    <div class="form-row">
+      <div class="form-group">
         <label for="inputMessage">Message</label>
         <input required type="textarea" class="form-control" id="inputMessage" name="message" />
       </div>
     </div>
-    <button type="submit" class="btn btn-dark btn-lg mt-3" data-bs-toggle="modal"
+    <button type="submit" class="btn btn-outline-light btn-lg mt-3" data-bs-toggle="modal"
       data-bs-target="#contactConfirmation">Send</button>
   </form>
 </template>
@@ -80,10 +80,15 @@ form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding-bottom: var(--margin-y);
+}
+
+form .form-row:first-of-type {
+  margin: var(--margin-y) 0 0 0
 }
 
 form label {
-  color: black;
+  color: #fefefe;
   margin: 0 0 .5rem 0;
   font-size: 1.5em;
 }
@@ -91,6 +96,8 @@ form label {
 form .form-row {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-basis: 100%;
 }
 
 form input {

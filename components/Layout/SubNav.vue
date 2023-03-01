@@ -1,22 +1,10 @@
 <template>
   <nav :class="computedNavClass">
-    <button
-      id="page-nav-1-1"
-      class="page-nav-btn"
-      @click="slide('next', 'first', $event)"
-    ></button>
-    <button
-      v-show="showSecondNavBtn"
-      id="page-nav-1-2"
-      class="page-nav-btn"
-      @click="slide('next', 'second', $event)"
-    ></button>
-    <button
-      v-show="showThirdNavBtn"
-      id="page-nav-1-3"
-      class="page-nav-btn"
-      @click="slide('next', 'third', $event)"
-    ></button>
+    <button id="page-nav-1-1" class="page-nav-btn" @click="slide('next', 'first', $event)"></button>
+    <button v-show="showSecondNavBtn" id="page-nav-1-2" class="page-nav-btn"
+      @click="slide('next', 'second', $event)"></button>
+    <button v-show="showThirdNavBtn" id="page-nav-1-3" class="page-nav-btn"
+      @click="slide('next', 'third', $event)"></button>
   </nav>
 </template>
 <script>
@@ -66,11 +54,10 @@ export default {
   opacity: 0;
   visibility: hidden;
   transition: opacity 1s ease-in 0s, right 0.5s ease-out 0s;
-  bottom: clamp(8vh, 8vh, 12vh);
+  bottom: clamp(14vh, 8vh, 12vh);
   gap: 2rem;
   max-width: 33vw;
-  background: url('~/assets/images/bg/page-nav-bg-bottom.png') repeat-x right
-    bottom;
+  background: url('~/assets/images/bg/page-nav-bg-bottom.png') repeat-x right bottom;
 }
 
 .page-nav-btn {
@@ -90,14 +77,14 @@ export default {
   transform: scale(1.25);
 }
 
-header.inactive + .page-nav-container {
+header.inactive+.page-nav-container {
   width: 45%;
   margin-bottom: 12rem;
   gap: 4rem;
   padding: 2rem 3rem;
 }
 
-header.inactive + .page-nav-container .page-nav-btn {
+header.inactive+.page-nav-container .page-nav-btn {
   transform: scale(1.35);
   cursor: initial;
 }
@@ -113,8 +100,7 @@ header.inactive + .page-nav-container .page-nav-btn {
 }
 
 .elearning.page-nav-container .page-nav-btn:first-of-type {
-  background: url('~/assets/images/icons/nuku-icon.png') no-repeat
-    center/contain;
+  background: url('~/assets/images/icons/nuku-icon.png') no-repeat center/contain;
 }
 
 .elearning.page-nav-container .page-nav-btn:nth-of-type(2) {
@@ -122,18 +108,15 @@ header.inactive + .page-nav-container .page-nav-btn {
 }
 
 .ecommerce.page-nav-container .page-nav-btn:first-of-type {
-  background: url('~/assets/images/icons/bike-icon.png') no-repeat
-    center/contain;
+  background: url('~/assets/images/icons/bike-icon.png') no-repeat center/contain;
 }
 
 .ecommerce.page-nav-container .page-nav-btn:nth-of-type(2) {
-  background: url('~/assets/images/icons/spinning-icon.png') no-repeat
-    center/contain;
+  background: url('~/assets/images/icons/spinning-icon.png') no-repeat center/contain;
 }
 
 .web3.page-nav-container .page-nav-btn:first-of-type {
-  background: url('~/assets/images/icons/atom-small.png') no-repeat
-    center/contain;
+  background: url('~/assets/images/icons/atom-small.png') no-repeat center/contain;
 }
 
 .web3.page-nav-container .page-nav-btn:nth-of-type(2) {

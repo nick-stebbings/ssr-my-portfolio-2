@@ -108,30 +108,31 @@ section.page:nth-of-type(2n + 1) article section.summary.article-section .copy {
 }
 
 p {
-  font-size: 12.8px;
-  line-height: 1rem;
+  font-size: var(--p-font-size);
+  line-height: var(--p-line-height);
+  letter-spacing: var(--p-tracking);
   margin-bottom: 0.75rem;
   font-family: 'Merriweather', 'Georgia', 'Times New Roman', serif;
   color: #3c3c3c;
 }
 
-.page[data-active='true'] h1,
-.page[data-active='true'] h2,
-.page[data-active='true'] p {
+main>section[data-active='true'] h1,
+main>section[data-active='true'] h2,
+main>section[data-active='true'] p {
   transition: all 0.5s;
 }
 
-.page[data-active='false'] h1,
-.page[data-active='false'] h2,
-.page[data-active='false'] p,
-.page[data-active='false'] li,
-.page[data-active='false'] figcaption {
+main>section[data-active='false'] h1,
+main>section[data-active='false'] h2,
+main>section[data-active='false'] p,
+main>section[data-active='false'] li,
+main>section[data-active='false'] figcaption {
   color: transparent;
   text-shadow: 0 0 45px rgba(0, 0, 0, 0.3);
   transition: all 0.5s;
 }
 
-.page[data-active='false'] img {
+main>section[data-active='false'] img {
   filter: blur(var(--margin-x));
 }
 

@@ -138,7 +138,7 @@ export default {
         if (staticNav) return
 
         const element = document.querySelector('nav.page-nav-container')
-        console.log('subNav :>> ', staticNav)
+        console.log('subNav :>> ', element)
         element.style.opacity = '1'
         element.style.visibility = 'visible'
 
@@ -146,8 +146,8 @@ export default {
         header.style.opacity = '1'
         header.style.visibility = 'visible'
 
-        // const articleContent = document.querySelector(".project.section-1");
-        // articleContent.style['margin-top'] = '-8rem';
+        const firstArticle = document.querySelector(".project.section-1");
+        firstArticle.style['margin-top'] = '-6rem';
       }, 4500)
     },
     skipToNav() {
@@ -169,14 +169,6 @@ export default {
   padding: 0;
 }
 
-#animation-wrapper-static {
-  display: block;
-  position: absolute;
-  min-height: var(--hero-height);
-  padding: 0;
-  margin-top: calc(-1 * var(--margin-x));
-}
-
 #animation-wrapper>svg {
   overflow: initial;
   width: 100%;
@@ -187,10 +179,6 @@ export default {
 @media (min-width: 1281px) {
   #animation-wrapper {
     display: block;
-  }
-
-  #animation-wrapper-static {
-    display: none;
   }
 }
 </style>

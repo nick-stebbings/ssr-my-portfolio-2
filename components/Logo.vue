@@ -8,6 +8,15 @@
             </text><text dx="0" dy="0" transform="translate(120,160)" id="logo-s">
                 <tspan y="0" font-weight="600" stroke-width="0">s</tspan>
             </text></g>
+
+        <g id="e8VQ6wvtuBg1222" transform="matrix(1 0 0 0.1 102 -26.550028)">
+            <g id="e8VQ6wvtuBg1223" transform="matrix(1 0 0 0.2 -20 1444.400004)">
+                <rect width="14" height="505" rx="0" ry="0" transform="matrix(-1.000001 0 0 8.272719 12.000014-1908.361291)"
+                    fill="#EEEDE7" fill-opacity="1"></rect>
+                <rect width="7" height="505" rx="0" ry="0" transform="matrix(-.999999 0 0 8.272719 26.000004-1908.361291)"
+                    fill="#EEEDE7" fill-opacity="1"></rect>
+            </g>
+        </g>
     </svg>
 </template>
 <script>

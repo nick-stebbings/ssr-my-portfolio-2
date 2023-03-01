@@ -35,6 +35,10 @@ body,
   --gutter-x: 0;
   --gutter-x-right: 1rem;
   --margin-y: 1rem;
+
+  --p-font-size: 16px;
+  --p-line-height: 1.5em;
+  --p-tracking: 1px;
   --h1-line-height: 1.2;
   --h2-line-height: 1.1;
   --h1-margin: 2rem 0 1rem;
@@ -77,10 +81,15 @@ main>section:not(.anim-to-nav) {
   padding: 0 var(--margin-x);
 }
 
-section[slot^=[section-]]>* {
+section[slot^="section-"]>* {
   margin: 0;
-  padding: var(--section-padding, 1rem);
+  padding: 0;
   font-size: var(--section-font-size, 1rem);
+}
+
+.project.section-1 {
+  margin-top: 24rem;
+  transition: 1s all ease-out;
 }
 
 .page-nav-container {

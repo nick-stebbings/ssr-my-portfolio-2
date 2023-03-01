@@ -6,12 +6,11 @@
     </template>
     <template v-if="isMobile" #hero>
       <Hero heading="I make amazing interactive web experiences" button-text="Book Me"
-        subheading="Lets talk about your next project"></Hero>
-    </template>
-    <template v-if="isMobile" #static-knife>
-      <div id="animation-wrapper-static">
-        <StaticNavSvg />
-      </div>
+        subheading="Lets talk about your next project">
+        <template #static-bg>
+          <StaticNavSvg />
+        </template>
+      </Hero>
     </template>
     <template v-else #animation>
       <section class="anim-to-nav">
@@ -74,7 +73,7 @@ export default {
   },
   computed: {
     isMobile() {
-      return !(this.$device.isMobile || this.$device.isTablet)
+      return (this.$device.isMobile || this.$device.isTablet)
     },
     isDesktop() {
       return (this.$device.isDesktop)
@@ -107,11 +106,7 @@ export default {
     // Hamburger
     switchPage(e) {
       const label = e.target.innerText.replace('-', '')
-      if (label == 'book me') {
-        const form = document.getElementById('contact-wrapper')
-        form.scrollIntoView()
-      }
-      this.activeLayer.value = label
+      this.activeLayer = label
     },
     // Desktop
     switchToLayer(layerName) {
@@ -120,7 +115,7 @@ export default {
       document.querySelectorAll('.bg-svg')[1].classList.remove('active')
       document.querySelectorAll('.bg-svg')[2].classList.add('active')
 
-      this.activeLayer.value = layerName
+      this.activeLayer = layerName
     },
     hoverLayerActive(layerName) {
       const subNav = document.querySelector('nav')
@@ -130,10 +125,10 @@ export default {
         () => {
           setHeaderTitles(layerName)
         },
-        layerName !== this.activeLayer.value ? 0 : 0
+        layerName !== this.activeLayer ? 0 : 0
       )
 
-      this.hoveredLayer.value = layerName
+      this.hoveredLayer = layerName
       subNav.className = 'page-nav-container ' + layerName
     },
 

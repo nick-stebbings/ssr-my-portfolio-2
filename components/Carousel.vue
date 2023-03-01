@@ -17,46 +17,57 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="~/assets/images/casestudyframes/habitfract1/1.png" class="d-block w-100" alt="App screens Slide" />
+        <img v-lazy-load src="~/assets/images/casestudyframes/habitfract1/1.png" class="d-block w-100"
+          alt="App screens Slide" />
       </div>
       <div class="carousel-item">
-        <img src="~/assets/images/casestudyframes/habitfract1/2.png" class="d-block w-100" alt="Title Slide" />
+        <img v-lazy-load src="~/assets/images/casestudyframes/habitfract1/2.png" class="d-block w-100"
+          alt="Title Slide" />
       </div>
       <div class="carousel-item">
-        <img src="~/assets/images/casestudyframes/habitfract1/3.png" class="d-block w-100" alt="Overview Slide" />
+        <img v-lazy-load src="~/assets/images/casestudyframes/habitfract1/3.png" class="d-block w-100"
+          alt="Overview Slide" />
       </div>
       <div class="carousel-item">
-        <img src="~/assets/images/casestudyframes/habitfract1/4.png" class="d-block w-100" alt="Structure Slide" />
+        <img v-lazy-load src="~/assets/images/casestudyframes/habitfract1/4.png" class="d-block w-100"
+          alt="Structure Slide" />
       </div>
       <div class="carousel-item">
-        <img src="~/assets/images/casestudyframes/habitfract1/5.png" class="d-block w-100" alt="Problem Slide" />
+        <img v-lazy-load src="~/assets/images/casestudyframes/habitfract1/5.png" class="d-block w-100"
+          alt="Problem Slide" />
       </div>
       <div class="carousel-item">
-        <img src="~/assets/images/casestudyframes/habitfract1/6.png" class="d-block w-100" alt="Problem Slide" />
+        <img v-lazy-load src="~/assets/images/casestudyframes/habitfract1/6.png" class="d-block w-100"
+          alt="Problem Slide" />
       </div>
       <div class="carousel-item">
-        <img src="~/assets/images/casestudyframes/habitfract1/7.png" class="d-block w-100" alt="Constraints Slide" />
+        <img v-lazy-load src="~/assets/images/casestudyframes/habitfract1/7.png" class="d-block w-100"
+          alt="Constraints Slide" />
       </div>
       <div class="carousel-item">
-        <img src="~/assets/images/casestudyframes/habitfract1/8.png" class="d-block w-100" alt="Desired Outcomes Slide" />
+        <img v-lazy-load src="~/assets/images/casestudyframes/habitfract1/8.png" class="d-block w-100"
+          alt="Desired Outcomes Slide" />
       </div>
       <div class="carousel-item">
-        <img src="~/assets/images/casestudyframes/habitfract1/9.png" class="d-block w-100" alt="Solutions Slide" />
+        <img v-lazy-load src="~/assets/images/casestudyframes/habitfract1/9.png" class="d-block w-100"
+          alt="Solutions Slide" />
       </div>
       <div class="carousel-item">
-        <img src="~/assets/images/casestudyframes/habitfract1/10.png" class="d-block w-100" alt="Solutions Slide" />
+        <img v-lazy-load src="~/assets/images/casestudyframes/habitfract1/10.png" class="d-block w-100"
+          alt="Solutions Slide" />
       </div>
       <div class="carousel-item">
-        <img src="~/assets/images/casestudyframes/habitfract1/11.png" class="d-block w-100" alt="Summary Slide" />
+        <img v-lazy-load src="~/assets/images/casestudyframes/habitfract1/11.png" class="d-block w-100"
+          alt="Summary Slide" />
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#case-study-carousel" data-bs-slide="prev">
     <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span> -->
+                        <span class="visually-hidden">Previous</span> -->
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#case-study-carousel" data-bs-slide="next">
     <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span> -->
+                        <span class="visually-hidden">Next</span> -->
     </button>
   </div>
 </template>
@@ -131,5 +142,4 @@
   padding: 0;
   background-color: #846b63;
   opacity: 0.5;
-}
-</style>
+}</style>
