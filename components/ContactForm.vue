@@ -30,7 +30,7 @@ function handleSubmit(e) {
   const modalBody = document.querySelector(".modal-body");
   const modalButton = document.querySelector(".modal-footer button");
   e.preventDefault();
-
+  debugger;
   const formData = new FormData(form);
   const object = Object.fromEntries(formData);
   const json = JSON.stringify(object);

@@ -182,7 +182,7 @@ article .article-tools {
       'row4'
       'row5'
       'row6';
-    row-gap: var(--margin-x);
+    row-gap: var(--margin-y);
   }
 }
 </style>

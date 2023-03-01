@@ -57,7 +57,7 @@ header.article-title.right {
 }
 
 .case-study header.active.article-title h2::before {
-  background-position: right;
+  /* background-position: right; */
 }
 
 .case-study header.article-title:hover {

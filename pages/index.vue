@@ -31,8 +31,10 @@
     <template #contact>
       <ContactSection :slide="slide" />
     </template>
+    <template #modal>
+      <ContactConfirmationModal />
+    </template>
   </Layout>
-  <!-- <ContactConfirmationModal /> -->
 </template>
 
 <script>
@@ -61,6 +63,7 @@ export default {
     AnimationWrapper,
     Header,
     Article,
+    ContactConfirmationModal,
     ContactSection,
   },
   data() {

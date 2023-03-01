@@ -5,6 +5,7 @@
     <slot name="animation"> </slot>
     <slot name="article-sections"></slot>
     <slot name="contact"></slot>
+    <slot name="modal"></slot>
   </main>
 </template>
 <script>
@@ -32,7 +33,7 @@ body,
 :root {
   --hero-height: 50vh;
   --margin-x: 1rem;
-  --gutter-x: 0;
+  --gutter-x: 1rem;
   --gutter-x-right: 1rem;
   --margin-y: 1rem;
   --bg-size: 12px;

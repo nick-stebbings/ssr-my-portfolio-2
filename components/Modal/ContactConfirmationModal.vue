@@ -1,5 +1,8 @@
 <template>
-  <div
+  <b-modal id="contactConfirmation" title="contactConfirmationLabel">
+    <p class="my-4">Hello from modal!</p>
+  </b-modal>
+  <!-- <div
     id="contactConfirmation"
     class="modal fade"
     tabindex="-1"
@@ -31,5 +34,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </template>

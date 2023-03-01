@@ -91,7 +91,7 @@ section.page:nth-of-type(2n + 1) article section.summary.article-section .copy {
 }
 
 .article-section .figure {
-  padding: var(--margin-y) var(--gutter-x-right) var(--margin-y) var(--gutter-x);
+  padding: 0 var(--gutter-x-right) var(--margin-y) var(--gutter-x);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -116,6 +116,7 @@ p {
   margin-bottom: 0.75rem;
   font-family: 'Merriweather', 'Georgia', 'Times New Roman', serif;
   color: #3c3c3c;
+  padding: 0 var(--gutter-x);
 }
 
 main>section[data-active='true'] h1,
