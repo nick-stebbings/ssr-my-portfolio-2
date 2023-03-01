@@ -65,17 +65,17 @@ body,
   gap: var(--margin-x) var(--margin-y);
 }
 
-main > * {
+main>* {
   flex: 1 0 100%;
   margin: 0;
   padding: 0;
 }
 
-main > section:not(.anim-to-nav) {
+main>section:not(.anim-to-nav) {
   padding: 0 var(--margin-x);
 }
 
-section > * {
+section>* {
   margin: 0;
   padding: var(--section-padding, 1rem);
   font-size: var(--section-font-size, 1rem);
@@ -127,7 +127,7 @@ button#skip-intro:hover {
     --header-padding: 0 6rem;
   }
 
-  main > section:not(.anim-to-nav) {
+  main>section:not(.anim-to-nav) {
     padding: 0 var(--margin-x);
   }
 

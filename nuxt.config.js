@@ -1,8 +1,8 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    css: ['~/assets/style.css'],
-    title: 'ssr-my-portfolio-2',
+    css: ['./assets/styles/main.css'],
+    title: 'Nick Stebb (Design Portfolio)',
     htmlAttrs: {
       lang: 'en',
     },
@@ -19,7 +19,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['@/plugins/bootstrap-vue'],
+  plugins: ['~/plugins/bootstrap-vue','~/plugins/device'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
