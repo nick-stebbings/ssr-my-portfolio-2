@@ -58,6 +58,7 @@ export default {
   gap: 2rem;
   max-width: 33vw;
   background: url('~/assets/images/bg/page-nav-bg-bottom.png') repeat-x right bottom;
+  background-size: var(--bg-size);
 }
 
 .page-nav-btn {
@@ -136,6 +137,7 @@ header.inactive+.page-nav-container .page-nav-btn {
     align-items: flex-end;
     z-index: 104;
     gap: 0;
+    width: 5vw;
   }
 
   .page-nav-container .page-nav-btn {

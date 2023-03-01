@@ -31,7 +31,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/device', 'nuxt-lazy-load'],
+  modules: ['@nuxtjs/device', 'nuxt-lazy-load','bootstrap-vue/nuxt'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

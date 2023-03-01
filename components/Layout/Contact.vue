@@ -1,8 +1,10 @@
 <template>
   <section id="contact">
     <div id="contact-wrapper">
+      <button id="return-home" @click="scrollHome">
+        <ArrowCircleUpIcon />
+      </button>
       <h1>contact me</h1>
-      <button id="return-home" @click="scrollHome"></button>
       <ContactForm></ContactForm>
     </div>
   </section>
@@ -10,6 +12,8 @@
 
 <script>
 import ContactForm from "../ContactForm.vue";
+import { ArrowCircleUpIcon } from "@vue-hero-icons/outline";
+
 export default {
   props: {
     slide: Function,
@@ -20,7 +24,8 @@ export default {
     }
   },
   components: {
-    ContactForm
+    ContactForm,
+    ArrowCircleUpIcon
   }
 }
 </script>
@@ -49,14 +54,12 @@ export default {
 }
 
 button#return-home {
-  transform: rotate(180deg);
-  position: absolute;
-  right: 0;
-  top: var(--margin-y);
-}
-
-button#return-home:hover {
-  right: -1rem;
-  top: calc(var(--margin-y) - .5rem);
+  transform: var(--btn-scale);
+  background: transparent;
+  color: white;
+  border: 0;
+  display: flex;
+  margin-top: var(--margin-y);
+  justify-content: flex-end;
 }
 </style>

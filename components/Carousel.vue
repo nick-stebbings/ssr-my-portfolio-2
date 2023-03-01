@@ -1,88 +1,75 @@
 <script setup></script>
 <template>
-  <div id="case-study-carousel" class="carousel slide" data-bs-interval="false" data-bs-ride="true">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#case-study-carousel" data-bs-slide-to="0" class="active" aria-current="true"
-        aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#case-study-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#case-study-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#case-study-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-      <button type="button" data-bs-target="#case-study-carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
-      <button type="button" data-bs-target="#case-study-carousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
-      <button type="button" data-bs-target="#case-study-carousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
-      <button type="button" data-bs-target="#case-study-carousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
-      <button type="button" data-bs-target="#case-study-carousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
-      <button type="button" data-bs-target="#case-study-carousel" data-bs-slide-to="9" aria-label="Slide 10"></button>
-      <button type="button" data-bs-target="#case-study-carousel" data-bs-slide-to="10" aria-label="Slide 11"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img v-lazy-load src="~/assets/images/casestudyframes/habitfract1/1.png" class="d-block w-100"
-          alt="App screens Slide" />
-      </div>
-      <div class="carousel-item">
-        <img v-lazy-load src="~/assets/images/casestudyframes/habitfract1/2.png" class="d-block w-100"
-          alt="Title Slide" />
-      </div>
-      <div class="carousel-item">
-        <img v-lazy-load src="~/assets/images/casestudyframes/habitfract1/3.png" class="d-block w-100"
-          alt="Overview Slide" />
-      </div>
-      <div class="carousel-item">
-        <img v-lazy-load src="~/assets/images/casestudyframes/habitfract1/4.png" class="d-block w-100"
-          alt="Structure Slide" />
-      </div>
-      <div class="carousel-item">
-        <img v-lazy-load src="~/assets/images/casestudyframes/habitfract1/5.png" class="d-block w-100"
-          alt="Problem Slide" />
-      </div>
-      <div class="carousel-item">
-        <img v-lazy-load src="~/assets/images/casestudyframes/habitfract1/6.png" class="d-block w-100"
-          alt="Problem Slide" />
-      </div>
-      <div class="carousel-item">
-        <img v-lazy-load src="~/assets/images/casestudyframes/habitfract1/7.png" class="d-block w-100"
-          alt="Constraints Slide" />
-      </div>
-      <div class="carousel-item">
-        <img v-lazy-load src="~/assets/images/casestudyframes/habitfract1/8.png" class="d-block w-100"
-          alt="Desired Outcomes Slide" />
-      </div>
-      <div class="carousel-item">
-        <img v-lazy-load src="~/assets/images/casestudyframes/habitfract1/9.png" class="d-block w-100"
-          alt="Solutions Slide" />
-      </div>
-      <div class="carousel-item">
-        <img v-lazy-load src="~/assets/images/casestudyframes/habitfract1/10.png" class="d-block w-100"
-          alt="Solutions Slide" />
-      </div>
-      <div class="carousel-item">
-        <img v-lazy-load src="~/assets/images/casestudyframes/habitfract1/11.png" class="d-block w-100"
-          alt="Summary Slide" />
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#case-study-carousel" data-bs-slide="prev">
-    <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span> -->
+  <div class="case-study">
+    <b-carousel ref="myCarousel" id="case-study-carousel" img-width="1024px">
+      <b-carousel-slide alt="App screens Slide" v-lazy-load
+        img-src="~/assets/images/casestudyframes/habitfract1/1.png"></b-carousel-slide>
+      <b-carousel-slide alt="Title Slide" v-lazy-load
+        img-src="~/assets/images/casestudyframes/habitfract1/2.png"></b-carousel-slide>
+      <b-carousel-slide alt="Overview Slide" v-lazy-load
+        img-src="~/assets/images/casestudyframes/habitfract1/3.png"></b-carousel-slide>
+      <b-carousel-slide alt="Structure Slide" v-lazy-load
+        img-src="~/assets/images/casestudyframes/habitfract1/4.png"></b-carousel-slide>
+      <b-carousel-slide alt="Problem Slide" v-lazy-load
+        img-src="~/assets/images/casestudyframes/habitfract1/5.png"></b-carousel-slide>
+      <b-carousel-slide alt="Problem Slide" v-lazy-load
+        img-src="~/assets/images/casestudyframes/habitfract1/6.png"></b-carousel-slide>
+      <b-carousel-slide alt="Constraints Slide" v-lazy-load
+        img-src="~/assets/images/casestudyframes/habitfract1/7.png"></b-carousel-slide>
+      <b-carousel-slide alt="Desired Outcomes Slide" v-lazy-load
+        img-src="~/assets/images/casestudyframes/habitfract1/8.png"></b-carousel-slide>
+      <b-carousel-slide alt="Solutions Slide" v-lazy-load
+        img-src="~/assets/images/casestudyframes/habitfract1/9.png"></b-carousel-slide>
+      <b-carousel-slide alt="Solutions Slide" v-lazy-load
+        img-src="~/assets/images/casestudyframes/habitfract1/10.png"></b-carousel-slide>
+      <b-carousel-slide alt="Summary Slide" v-lazy-load
+        img-src="~/assets/images/casestudyframes/habitfract1/11.png"></b-carousel-slide>
+    </b-carousel>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#case-study-carousel" data-bs-slide="prev"
+      @click="prev">
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#case-study-carousel" data-bs-slide="next">
-    <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span> -->
+    <button class="carousel-control-next" type="button" data-bs-target="#case-study-carousel" data-bs-slide="next"
+      @click="next">
     </button>
   </div>
 </template>
+<script>
+export default {
+  methods: {
+    prev() {
+      this.$refs.myCarousel.prev()
+    },
+    next() {
+      this.$refs.myCarousel.next()
+    }
+  }
+}
+</script>
 <style>
-.case-study .carousel-control-prev,
-.case-study .carousel-control-next {
-  position: absolute;
-  top: -5.5rem;
-  bottom: initial;
+.case-study {
+  position: relative;
 }
 
 .case-study .carousel-control-prev,
 .case-study .carousel-control-next {
-  height: 3rem;
-  width: 3rem;
+  position: absolute;
+  bottom: initial;
+  display: none;
+  margin: 1rem;
+  transform: var(--btn-scale);
+}
+
+.case-study.active .carousel-control-prev,
+.case-study.active .carousel-control-next {
+  top: -3rem;
+  display: block;
+}
+
+.case-study .carousel-control-prev,
+.case-study .carousel-control-next {
+  height: 1rem;
+  width: 1rem;
   padding: 0.5rem;
   background-color: #846b63;
   border-radius: 0.5rem;
@@ -107,6 +94,7 @@
   position: relative;
   padding: 0 4rem 0 0;
   background-image: url('~/assets/images/bg/page-nav-bg-right.png');
+  background-size: var(--bg-size);
   background-position: right;
   background-repeat: repeat-y;
   height: 0;
@@ -138,8 +126,9 @@
   align-items: center;
   bottom: 0;
   left: -2.5rem;
-  margin: 0;
+  margin: 0 !important;
   padding: 0;
   background-color: #846b63;
   opacity: 0.5;
-}</style>
+}
+</style>

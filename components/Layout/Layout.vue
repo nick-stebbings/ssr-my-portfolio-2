@@ -35,6 +35,8 @@ body,
   --gutter-x: 0;
   --gutter-x-right: 1rem;
   --margin-y: 1rem;
+  --bg-size: 12px;
+  --btn-scale: scale(2);
 
   --p-font-size: 16px;
   --p-line-height: 1.5em;
@@ -98,15 +100,26 @@ section[slot^="section-"]>* {
 
 /* Buttons */
 button#skip-intro {
-  display: none;
+  width: 4rem;
+  height: 4rem;
+  border: 0;
+  background-color: transparent;
+  position: absolute;
   right: calc(var(--margin-x));
   top: 2rem;
   z-index: 100;
   background-image: url('~/assets/images/icons/skip-icon.png');
+  background-repeat: no-repeat;
+  transition: .3s all ease-out;
 }
 
 button#skip-intro:hover {
-  right: calc(var(--margin-x) + -1rem);
+  border: 2px dashed #846B63;
+  padding: 1rem;
+  height: 6rem;
+  width: 6rem;
+  background-position: center;
+  border-radius: 1rem;
 }
 
 #contact-wrapper {
@@ -130,6 +143,8 @@ button#skip-intro:hover {
 @media (min-width: 1280px) {
   :root {
     --margin-x: calc(((var(--svg-x) / 1280) * 100vw));
+    --bg-size: auto;
+    --btn-scale: scale(3);
     --gutter-x: 2.5rem;
     --margin-y: 1rem;
     --h1-line-height: 1.4;
@@ -141,10 +156,6 @@ button#skip-intro:hover {
 
   main>section:not(.anim-to-nav) {
     padding: 0 var(--margin-x);
-  }
-
-  button#skip-intro {
-    display: block;
   }
 
   #contact {

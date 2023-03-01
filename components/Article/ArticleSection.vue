@@ -51,12 +51,14 @@ section.article-section img {
 
 section.article-section.summary {
   background-image: url('~/assets/images/bg/page-nav-bg-right.png');
+  background-size: var(--bg-size);
   background-position: right;
 }
 
 section.article-section.para:nth-of-type(2n) {
   background-position: right;
   background-image: url('~/assets/images/bg/page-nav-bg-right.png');
+  background-size: var(--bg-size);
 }
 
 section.article-section.paras {
@@ -175,6 +177,7 @@ main>section[data-active='false'] img {
     position: relative;
     justify-content: space-between;
     background-image: url('~/assets/images/bg/page-nav-bg-left.png');
+    background-size: var(--bg-size);
     background-repeat: repeat-y;
     background-position: left;
     padding: 0 3rem 0 0;
@@ -210,7 +213,6 @@ main>section[data-active='false'] img {
   .page article .article-section:nth-child(2n + 1) .figure {
     padding-right: initial;
     padding-left: 3rem;
-    /* background-image: url("~/assets/images/bg/page-nav-bg-left.png"); */
     background-position: left;
     align-items: flex-end;
     justify-content: center;

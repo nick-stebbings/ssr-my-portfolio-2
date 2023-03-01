@@ -11,10 +11,7 @@
       <div class="langs-libs">
         <div class="langs-libs-icons">
           <div class="langs-icon">
-            <img
-              src="~/assets/images/icons/code-icon.png"
-              alt="languages icon"
-            />
+            <img src="~/assets/images/icons/code-icon.png" alt="languages icon" />
           </div>
           <div class="libs-icon">
             <img src="~/assets/images/icons/tools-icon.png" alt="tools icon" />
@@ -39,17 +36,11 @@
       </div>
       <div v-show="hasDemo" class="demo-content">
         <div class="content-icon">
-          <img
-            src="~/assets/images/icons/viewports-icon.png"
-            alt="viewports-icon"
-          />
+          <img src="~/assets/images/icons/viewports-icon.png" alt="viewports-icon" />
         </div>
         <div class="content-link">
           <a :href="demoUrl" target="_blank">
-            <img
-              src="~/assets/images/icons/link-icon.png"
-              alt="demo hyperlink"
-            />
+            <img src="~/assets/images/icons/link-icon.png" alt="demo hyperlink" />
           </a>
         </div>
       </div>
@@ -59,10 +50,7 @@
         </div>
         <div class="content-link">
           <a :href="codebaseUrl" target="_blank">
-            <img
-              src="~/assets/images/icons/link-icon.png"
-              alt="codebase hyperlink"
-            />
+            <img src="~/assets/images/icons/link-icon.png" alt="codebase hyperlink" />
           </a>
         </div>
       </div>
@@ -72,10 +60,7 @@
         </div>
         <div class="content-link">
           <a :href="designsUrl" target="_blank">
-            <img
-              src="~/assets/images/icons/link-icon.png"
-              alt="designs hyperlink"
-            />
+            <img src="~/assets/images/icons/link-icon.png" alt="designs hyperlink" />
           </a>
         </div>
       </div>
@@ -85,10 +70,7 @@
         </div>
         <div class="content-link">
           <a :href="blogUrl" target="_blank">
-            <img
-              src="~/assets/images/icons/link-icon.png"
-              alt="blog hyperlink"
-            />
+            <img src="~/assets/images/icons/link-icon.png" alt="blog hyperlink" />
           </a>
         </div>
       </div>
@@ -217,6 +199,7 @@ section.article-tools .tools-content {
   height: 2rem;
   max-width: 100%;
   background-image: url('~/assets/images/bg/page-nav-bg-left.png');
+  background-size: var(--bg-size);
   background-position: left;
   height: auto;
 }
@@ -262,6 +245,7 @@ section.article-tools .tools-content ul li {
 }
 
 @media only screen and (max-width: 1280px) {
+
   section.article-tools .langs-libs,
   section.article-tools .langs-libs-lists,
   section.article-tools .langs-libs-icons {

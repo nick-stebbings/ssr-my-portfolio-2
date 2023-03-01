@@ -36,6 +36,7 @@ export default {
     ArticleTitle,
     ArticleTools,
     Carousel,
+    ArrowCircleUpIcon
   },
   props: {
     details: Object,
@@ -67,9 +68,20 @@ article {
   min-height: 100vh;
 }
 
+button.return-home-up {
+  transform: var(--btn-scale);
+  background: transparent;
+  color: #3c3c3c;
+  opacity: 0.5 !important;
+  border: 0;
+}
+
+button.return-home-up:hover {
+  color: black;
+}
+
 .article-content-wrapper {
-  /* width: 100%; */
-  /* height: 100%; */
+  margin-top: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows:

@@ -159,11 +159,13 @@ header.article-title h2 {
 
 header.article-title.right h2 {
   background-image: url('~/assets/images/bg/page-nav-bg-right.png');
+  background-size: var(--bg-size);
   background-position: right;
 }
 
 header.article-title.left h2 {
   background-image: url('~/assets/images/bg/page-nav-bg-left.png');
+  background-size: var(--bg-size);
   background-position: left;
 }
 
