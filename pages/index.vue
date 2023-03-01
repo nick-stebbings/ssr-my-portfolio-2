@@ -1,9 +1,9 @@
 <template>
   <Layout>
-    <template #nav>
+    <template :v-if="isMobile" #nav>
       <HamburgerNav :switch-page="switchPage"></HamburgerNav>
     </template>
-    <template #hero>
+    <template :v-if="isMobile" #hero>
       <Hero heading="I make amazing interactive web experiences" button-text="Book Me"
         subheading="Lets talk about your next project"></Hero>
     </template>
@@ -14,7 +14,7 @@
             <SubNav :slide="slide" :hovered-layer="hoveredLayer" :active-layer="activeLayer" />
           </template>
         </AnimationWrapper>
-        <Header :active-layer="activeLayer" :hovered-layer="hoveredLayer" :headerTitles="headerTitles"></Header>
+        <Header :active-layer="activeLayer" :hovered-layer="hoveredLayer" :header-titles="headerTitles"></Header>
       </section>
     </template>
     <template #article-sections>
@@ -29,7 +29,6 @@
   </Layout>
   <!-- <ContactConfirmationModal /> -->
 </template>
-
 
 <script>
 import { ref, computed } from 'vue'
@@ -47,8 +46,56 @@ import ContactConfirmationModal from '../components/Modal/ContactConfirmationMod
 import projects from './projectData.js'
 import projectHeaders from './headerData.js'
 export default {
+  components: {
+    Layout,
+    HamburgerNav,
+    SubNav,
+    Hero,
+    AnimationWrapper,
+    Header,
+    Article,
+    ContactSection,
+  },
+  setup() {
+    const headerTitles = ref(projectHeaders.web3)
+    function getHeaderTitles(pageName) {
+      // Header state variables
+      headerTitles.value = projectHeaders[pageName]
+    }
+
+    // // First articles title state
+    // const activeFirstSection = computed(
+    //     () => activeLayer.value === hoveredLayer.value
+    // )
+  },
+
+  data() {
+    return {
+      currentHeaderChangeSetTimeout: 1,
+      headerTitles: projectHeaders.web3,
+      activeLayer: 'default',
+      hoveredLayer: 'web3',
+      activeLayer: 'default',
+    }
+  },
+  computed: {
+    isMobile() {
+      return this.isMobile
+    },
+    activeProjects() {
+      return (
+        ['web3', 'ecommerce', 'elearning'].includes(this.activeLayer.value) &&
+        projects[this.activeLayer.value]
+      )
+    },
+  },
   mounted() {
-    const observer = new IntersectionObserver(intersectionObsCallback, options)
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1,
+    }
+    const observer = new IntersectionObserver(this.intersectionObsCallback, options)
     const targets = document.querySelectorAll('.project')
     targets.forEach((target) => observer.observe(target))
   },
@@ -124,51 +171,15 @@ export default {
         const page0 = document.querySelector('.anim-to-nav')
         page0.scrollIntoView()
       }
-    }
-  },
-
-  data() {
-    return {
-      currentHeaderChangeSetTimeout: 1,
-      headerTitles: projectHeaders.web3,
-      activeLayer: 'default',
-      hoveredLayer: 'web3',
-      activeLayer: 'default',
-    }
-  },
-  computed: {
-    isMobile() {
-      return this.isMobile
     },
-    activeProjects() {
-      return ['web3', 'ecommerce', 'elearning'].includes(this.activeLayer.value) &&
-        projects[this.activeLayer.value]
-    }
-  },
-  setup() {
-    const headerTitles = ref(projectHeaders.web3);
-    function getHeaderTitles(pageName) {
-      // Header state variables
-      headerTitles.value = projectHeaders[pageName]
-    };
 
-    // // First articles title state
-    // const activeFirstSection = computed(
-    //     () => activeLayer.value === hoveredLayer.value
-    // )
+    intersectionObsCallback(entries, observer) {
+      // Lazy loading of images/buttons further down the page
+      const makeVisible = (upBtn) => {
+        upBtn.style.visibility = 'visible'
+        upBtn.style.opacity = '1'
+      }
 
-    // Lazy loading of images/buttons further down the page
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1,
-    };
-    const makeVisible = (upBtn) => {
-      upBtn.style.visibility = 'visible'
-      upBtn.style.opacity = '1'
-    };
-
-    const intersectionObsCallback = (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const targetClassList = entry.target.classList
@@ -185,8 +196,7 @@ export default {
           observer.unobserve(entry.target)
         }
       })
-    };
-
+    }
   },
 }
 </script>
