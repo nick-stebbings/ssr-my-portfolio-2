@@ -184,7 +184,7 @@ main>section[data-active='false'] img {
   }
 
   section.article-section .copy {
-    padding: 0 var(--gutter-x);
+    padding: 0;
     flex-basis: 80%;
   }
 

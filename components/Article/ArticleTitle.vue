@@ -117,6 +117,10 @@ header.article-title h1 {
   font-weight: 500;
 }
 
+.case-study.active header.article-title h2::before {
+  background-size: 20%;
+}
+
 header.article-title h2::before {
   position: absolute;
   content: '';

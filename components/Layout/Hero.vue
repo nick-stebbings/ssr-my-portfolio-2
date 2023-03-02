@@ -69,6 +69,10 @@ div.hero-container>div:first-child {
   z-index: 10;
 }
 
+#animation-wrapper-static>* {
+  cursor: initial !important;
+}
+
 #animation-wrapper-static {
   display: block;
   position: absolute;
