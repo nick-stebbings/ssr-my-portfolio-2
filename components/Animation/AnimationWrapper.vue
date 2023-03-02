@@ -6,8 +6,10 @@
       <AnimationGlowingNLoopScene v-show="glowingNLoopSceneVisible" :launch="launch2" />
       <AnimationScene2 v-show="intro2Visible" :launch="launch3" />
       <AnimationMainLoopScene v-show="mainLoopVisible" :launch="launch4" />
-      <AnimationNavScene v-show="navVisible" :hover-layer-active="hoverLayerActive" :switch-to-layer="switchToLayer" />
+      <AnimationNavScene v-show="navVisible" :hover-layer-active="hoverLayerActive" :switch-to-layer="switchToLayer"
+        :showHero="showHero" />
     </div>
+    <slot name="hero"></slot>
     <slot name="sub-nav"></slot>
   </div>
 </template>
@@ -26,10 +28,12 @@ export default {
     AnimationScene2,
     AnimationMainLoopScene,
     AnimationNavScene,
+    AnimationNavScene,
   },
   props: {
     switchToLayer: Function,
     hoverLayerActive: Function,
+    showHero: Function,
   },
   data() {
     return {
@@ -57,13 +61,8 @@ export default {
       this.launchNavAfterTimeout = newVal
     },
   },
-  mounted() {
-    this.showModal()
-  },
   mounted: function () {
     // Time the arrival of the first scene
-    // element.svgatorPlayer.restart()
-
     this.playNextSceneTimeout = setTimeout(() => {
       this.launchScene(1)
       // Time the arrival of the second scene (index 1)
@@ -71,7 +70,7 @@ export default {
       scene2.style.display = 'none'
     }, 8000)
     // Assume the user will not click after this amount of time
-    this.launchNavAfterTimeout = setTimeout(this.skipToNav, 35000)
+    this.launchNavAfterTimeout = setTimeout(this.skipToNav.bind(null), 35000)
   },
   methods: {
     // Scene switch helper functions
@@ -146,13 +145,18 @@ export default {
         header.style.opacity = '1'
         header.style.visibility = 'visible'
 
-        const firstArticle = document.querySelector(".project.section-1");
-        firstArticle.style['margin-top'] = '-6rem';
+        // const firstArticle = document.querySelector(".project.section-1");
+        // firstArticle.style['margin-top'] = '-6rem';
+
+        const hero = document.querySelector(".hero-container");
+        hero.style.visibility = 'visible'
+        hero.style.opacity = '1'
       }, 4500)
     },
     skipToNav() {
       this.launch4()
       const element = document.getElementById('eXJRUNPtokm1')
+      if (!element) return;
       element.style.display = 'none'
     },
   },

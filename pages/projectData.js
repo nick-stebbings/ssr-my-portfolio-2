@@ -1,4 +1,5 @@
 export default {
+  'default': [],
   ecommerce: [
     {
       title: 'y5 Ltd.',

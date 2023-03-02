@@ -1,4 +1,6 @@
 export default {
+
+  'default': {},
   ecommerce: {
     h1: 'e-commerce',
     h2: 'Using the best tools for the job to help businesses grow',

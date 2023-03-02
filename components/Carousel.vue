@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-  <div class="case-study" style="max-width: 1024px;">
+  <div class="case-study-car" style="max-width: 1024px;">
     <b-carousel fade no-wrap ref="myCarousel" id="case-study-carousel" :interval="0" img-width="1024px">
       <b-carousel-slide alt="App screens Slide" v-lazy-load
         img-src="~/assets/images/casestudyframes/habitfract1/1.png"></b-carousel-slide>

@@ -77,6 +77,9 @@ body,
   justify-content: space-between;
   align-items: stretch;
   gap: var(--margin-x) var(--margin-y);
+  position: absolute;
+  top: 0;
+  bottom: 0;
 }
 
 main>* {
@@ -108,6 +111,11 @@ section[slot^="section-"]>* {
   right: var(--margin-x) !important;
 }
 
+.page-nav-container.default {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
 /* Buttons */
 button#skip-intro {
   width: 4rem;
@@ -130,6 +138,8 @@ button#skip-intro:hover {
   width: 6rem;
   background-position: center;
   border-radius: 1rem;
+  top: 1rem;
+  right: calc(var(--margin-x) - 1rem);
 }
 
 #contact-wrapper {
@@ -151,7 +161,8 @@ button#skip-intro:hover {
     --h1-line-height: 1.3;
     --h2-line-height: 1.2;
     /* --h1-margin: 3rem 0 2rem;
-    --h2-margin: 2.5rem 0 1.5rem; */
+    */
+    --h2-margin: 2.5rem;
   }
 
   h1.hero-header {
@@ -170,12 +181,18 @@ button#skip-intro:hover {
     --h1-line-height: 1.4;
     --h2-line-height: 1.3;
     --h1-margin: 4rem 0 3rem;
-    --h2-margin: 3.5rem 0 2.5rem;
+    --h2-margin: 3.5rem;
     --header-padding: 0 6rem;
   }
 
   main>section:not(.anim-to-nav) {
     padding: 0 var(--margin-x);
+  }
+
+  h1.hero-header {
+    margin-left: 0%;
+    margin-right: 15%;
+    text-align: left !important;
   }
 
   #contact {
@@ -198,11 +215,11 @@ button#skip-intro:hover {
     --margin-x: calc((100vw - var(--svg-max-w-px)) / 2 + 1.2 * var(--svg-x-px));
     --header-left: calc(var(--margin-x) + 400px);
     --gutter-x: 3rem;
-    --margin-y: 4rem;
+    --margin-y: 2rem;
     --h1-line-height: 1.5;
     --h2-line-height: 1.4;
     --h1-margin: 5rem 0 4rem;
-    --h2-margin: 4.5rem 0 3.5rem;
+    --h2-margin: 2.5rem;
     --header-padding: 0 8rem;
   }
 

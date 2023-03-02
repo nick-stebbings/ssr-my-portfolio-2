@@ -16,8 +16,11 @@
     </template>
     <template v-else #animation>
       <section class="anim-to-nav">
-        <AnimationWrapper :switch-to-layer="switchToLayer" :hover-layer-active="hoverLayerActive">
-          <template #sub-nav>
+        <AnimationWrapper :showHero="showHero" :switch-to-layer="switchToLayer" :hover-layer-active="hoverLayerActive">
+          <template #hero>
+            <Hero heading="I make amazing interactive web experiences" button-text="Book Me"
+              subheading="Lets talk about your next project in..." />
+          </template> <template #sub-nav>
             <SubNav :slide="slide" :hovered-layer="hoveredLayer" :active-layer="activeLayer" />
           </template>
         </AnimationWrapper>
@@ -71,9 +74,9 @@ export default {
   data() {
     return {
       currentHeaderChangeSetTimeout: 1,
-      headerTitles: projectHeaders.web3,
-      hoveredLayer: 'web3',
-      activeLayer: 'web3',
+      headerTitles: projectHeaders.default,
+      hoveredLayer: 'default',
+      activeLayer: 'default',
       projectHeaders
     }
   },
@@ -102,6 +105,17 @@ export default {
     const observer = new IntersectionObserver(this.intersectionObsCallback, options)
     const targets = document.querySelectorAll('.project')
     targets.forEach((target) => observer.observe(target))
+
+    const logo = document.getElementById('logo');
+    logo.addEventListener('click', () => {
+      this.setHeaderTitles('default');
+      this.showHero()
+      this.activeLayer = "default";
+      this.hoveredLayer = "default";
+
+      const headerH1 = document.querySelector("header h1");
+      headerH1.dataset.middle = false;
+    })
   },
   methods: {
     setHeaderTitles(pageName) {
@@ -113,6 +127,12 @@ export default {
       const label = e.target.innerText.replace('-', '')
       this.activeLayer = label
     },
+    showHero() {
+      const hero = document.querySelector(".hero-container");
+      if (!hero) return;
+      hero.style.visibility = 'visible'
+      hero.style.opacity = '1'
+    },
     // Desktop
     switchToLayer(layerName) {
       this.setHeaderTitles(layerName)
@@ -123,7 +143,6 @@ export default {
       this.activeLayer = layerName
     },
     hoverLayerActive(layerName) {
-      debugger;
       const subNav = document.querySelector('nav')
 
       clearTimeout(this.currentHeaderChangeSetTimeout)

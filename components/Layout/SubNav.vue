@@ -30,6 +30,8 @@ export default {
   mounted: function () {
     const navBtns = document.querySelectorAll('.page-nav-btn')
     const headerLinks = document.querySelectorAll('span.header-link')
+
+    if (!navBtns?.length || !headerLinks?.length) return;
     navBtns.forEach((btn, i) => {
       btn.addEventListener('mouseover', () => {
         headerLinks[i].style['text-decoration'] = 'underline'
@@ -39,10 +41,6 @@ export default {
       })
     })
 
-    const bookMeLinkTarget = document.getElementById('book-me-label')
-    bookMeLinkTarget.addEventListener('click', () =>
-      this.slide('top', 'bookme')
-    )
   },
 }
 </script>

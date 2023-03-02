@@ -17,13 +17,7 @@ export default {
       { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png', sizes: '32x32' },
     {
       rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css2?family=Londrina+Solid&family=Rubik:wght@300;400;500;600&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap'
-    },
-  ],
-  script: [
-    {
-      src: "https://cdn.jsdelivr.net/npm/d3-selection@3/+esm",
-      type: "text/javascript",
+      href: 'https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&family=Montserrat:wght@300;400;500;600&family=Rubik:wght@300;400;500;600&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap'
     },
   ],
   },

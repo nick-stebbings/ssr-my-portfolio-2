@@ -23,13 +23,14 @@ header {
   top: var(--margin-top);
   right: var(--margin-x);
   left: var(--header-left);
+  padding-right: var(--gutter-x);
 }
 
 header .header-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 4vh;
+  gap: var(--margin-y);
   max-width: 80%;
   margin: 0 auto;
 }
@@ -50,13 +51,13 @@ form label {
 }
 
 h1 {
-  font-family: "Londrina Solid", "Roboto", "Arial", "sans-serif";
+  font-family: "Londrina Solid", "Rubik", "Arial", "sans-serif";
   /* font-size: 5.0625em; 81.5px */
   font-size: 3.375em;
   /* 54px */
 
   /* type scale: perfect fifth */
-  font-weight: 400;
+  font-weight: 300;
   text-transform: capitalize;
   margin-bottom: 1rem;
   line-height: 3.375rem;
@@ -69,7 +70,7 @@ h2 {
   /* 36px */
   line-height: 2.25rem;
   margin: 0 auto 2.25rem auto;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 h3 {
@@ -99,7 +100,12 @@ h1.inactive {
 }
 
 h1.inactive {
+  margin-top: 50%;
+}
+
+h1.inactive[data-middle="true"] {
   margin-top: 33%;
+  font-size: 10rem;
 }
 
 h2.inactive,
@@ -126,6 +132,7 @@ h1.inactive {
     padding-right: 2rem;
   }
 }
+
 
 @media (min-width: 1281px) {
 
@@ -205,7 +212,8 @@ h1.inactive {
   h3 {
     font-size: 1.5em;
     /* 36px */
-    line-height: 2.25em;
+    /* 36px */
+    line-height: var(--h2-line-height);
     /* 34px */
     font-weight: 400;
     max-width: 90%;

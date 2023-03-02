@@ -281,6 +281,7 @@ export default {
   props: {
     switchToLayer: Function,
     hoverLayerActive: Function,
+    showHero: Function,
   },
   mounted() {
     ; (function (s, i, u, o, c, w, d, t, n, x, e, p, a, b) {
@@ -554,8 +555,21 @@ export default {
     const bookMeHoverSelection = selectAll(bookMeHoverId);;
     const notLoadedYet = () => (document.querySelector("nav").style.opacity != 1) // FIX THIS
 
+    const hideHero = () => {
+      const hero = document.querySelector(".hero-container");
+      if (!hero) return;
+
+      hero.style.visibility = 'hidden'
+      hero.style.opacity = '0'
+
+
+      const headerH1 = document.querySelector("header h1");
+      headerH1.dataset.middle = true;
+    }
+
     const makeLayer1Active = () => {
       if (notLoadedYet()) return;
+
       knifeSelection.attr("opacity", 1);
       sawSelection.attr("opacity", 0);
       corkScrewSelection.attr("opacity", 0);
@@ -569,11 +583,13 @@ export default {
       this.hoverLayerActive('ecommerce');
     }
     const selectLayer1 = () => {
+      hideHero()
       this.switchToLayer('ecommerce');
     }
 
     const makeLayer2Active = () => {
       if (notLoadedYet()) return;
+
       sawSelection.attr("opacity", 1);
       knifeSelection.attr("opacity", 0);
       corkScrewSelection.attr("opacity", 0);
@@ -590,11 +606,13 @@ export default {
     }
 
     const selectLayer2 = () => {
+      hideHero()
       this.switchToLayer('elearning');
     }
 
     const makeLayer3Active = () => {
       if (notLoadedYet()) return;
+
       corkScrewSelection.attr("opacity", 1);
       knifeSelection.attr("opacity", 0);
       sawSelection.attr("opacity", 0);
@@ -609,6 +627,7 @@ export default {
       this.hoverLayerActive('web3');
     }
     const selectLayer3 = () => {
+      hideHero()
       this.switchToLayer('web3');
     }
     const returnToSelectedLayer = (e) => {
@@ -625,30 +644,34 @@ export default {
           break;
 
         default:
+          this.showHero()
           break;
       }
     }
 
-    //knife mouseover
-    selectAll(layer1Id).on("mouseout", returnToSelectedLayer, 1000);
-    selectAll(knifeLayerId).on("mouseover", makeLayer1Active, 200);
-    selectAll("#e-commerce-label").on("mouseover", makeLayer1Active, 200);
+    // knife mouseover
+    selectAll(layer1Id).on("mouseout", returnToSelectedLayer);
+    selectAll(knifeLayerId).on("mouseover", makeLayer1Active);
+    selectAll("#e-commerce-label").on("mouseover", makeLayer1Active);
     selectAll(knifeLayerId).on("click", selectLayer1);
     selectAll("#e-commerce-label").on("click", selectLayer1);
 
     // saw mouseover
-    selectAll(layer2Id).on("mouseout", returnToSelectedLayer, 1000);
-    selectAll(sawLayerId).on("mouseover", makeLayer2Active, 200);
-    selectAll("#e-learning-label").on("mouseover", makeLayer2Active, 200);
+    selectAll(layer2Id).on("mouseout", returnToSelectedLayer);
+    selectAll(sawLayerId).on("mouseover", makeLayer2Active);
+    selectAll("#e-learning-label").on("mouseover", makeLayer2Active);
     selectAll(sawLayerId).on("click", selectLayer2);
     selectAll("#e-learning-label").on("click", selectLayer2);
 
     // saw mouseover
-    selectAll(layer3Id).on("mouseout", returnToSelectedLayer, 1000);
-    selectAll(layer3Id).on("mouseover", makeLayer3Active, 200);
+    selectAll(layer3Id).on("mouseout", returnToSelectedLayer);
+    selectAll(layer3Id).on("mouseover", makeLayer3Active);
+
     // selectAll(layer3Id).on("mouseout", returnToSelectedLayer);
-    selectAll("#web3-label").on("mouseover", makeLayer3Active, 300);
-    selectAll(corkscrewLayerId).on("mouseover", makeLayer3Active, 200);
+
+    selectAll("#web3-label").on("mouseover", makeLayer3Active);
+    // selectAll(corkscrewLayerId).on("mouseover", makeLayer3Active);
+
     selectAll(layer3Id).on("click", selectLayer3);
     selectAll("#web3-label").on("click", selectLayer3);
     selectAll(corkscrewLayerId).on("click", selectLayer3);

@@ -33,6 +33,8 @@ export default {
 /* Contact form */
 #contact {
   background-color: #3c3c3c;
+  position: relative;
+  z-index: 200;
 }
 
 #contact-wrapper h1 {
@@ -63,6 +65,7 @@ button#return-home {
   justify-content: flex-end;
   position: absolute;
   right: var(--margin-x);
+  padding: 0;
 }
 
 @media (min-width: 1680px) {

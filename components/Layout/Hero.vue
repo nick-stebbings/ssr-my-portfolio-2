@@ -44,6 +44,8 @@ h1.hero-header,
 h2.hero-subheader {
   text-align: right;
   font-family: "Rubik", "Roboto", "Arial", "sans-serif" !important;
+  color: #3C3C3C;
+  opacity: 0.9;
 }
 
 h1.hero-header {
@@ -57,6 +59,8 @@ h2.hero-subheader,
 a {
   margin-top: var(--h2-margin);
   font-weight: 300;
+  border-radius: 2.5rem;
+  padding: .5rem 2rem;
 }
 
 div.hero-container>div:first-child {
@@ -98,6 +102,23 @@ div.hero-container>div:first-child {
 }
 
 @media (min-width: 1680px) {
+  .hero-container {
+    opacity: 0;
+    visibility: hidden;
+    transition: .15s all ease-in;
+  }
+
+  div.hero-container>div:first-child {
+    padding: var(--margin-y) calc(var(--margin-x) + 4rem) 0 4rem;
+    display: flex;
+    align-items: start;
+  }
+
+  a {
+    margin: calc(7*var(--margin-y)) auto 0 auto;
+    font-size: 3rem;
+  }
+
   h1.hero-header {
     font-size: 5rem;
   }
