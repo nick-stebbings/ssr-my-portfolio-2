@@ -134,11 +134,11 @@ export default {
       setTimeout(function () {
         // bypass this on mobile TODO
         const staticNav = document.getElementById('#animation-wrapper-static')
-        console.log('staticNav :>> ', staticNav)
+
         if (staticNav) return
 
         const element = document.querySelector('nav.page-nav-container')
-        console.log('subNav :>> ', element)
+
         element.style.opacity = '1'
         element.style.visibility = 'visible'
 

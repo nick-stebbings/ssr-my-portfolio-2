@@ -48,7 +48,6 @@ export default {
     const carouselCaseStudies = document.querySelectorAll('.carousel.slide')
     expandCaseStudyBtns.forEach((btn, i) => {
       btn.addEventListener('click', () => {
-        console.log('Expanding case study...', expandCaseStudyBtns)
         carouselCaseStudies[i].style.height = btn.classList.contains('active')
           ? '0'
           : 'auto'

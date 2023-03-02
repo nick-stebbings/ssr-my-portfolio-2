@@ -12,11 +12,19 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    link: [
+      { rel: 'icon', type: 'image/png', href: '/favicon-16x16.png', sizes: '16x16' },
+      { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png', sizes: '32x32' },
     {
       rel: 'stylesheet',
       href: 'https://fonts.googleapis.com/css2?family=Londrina+Solid&family=Rubik:wght@300;400;500;600&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap'
-    }
+    },
+  ],
+  script: [
+    {
+      src: "https://cdn.jsdelivr.net/npm/d3-selection@3/+esm",
+      type: "text/javascript",
+    },
   ],
   },
 
@@ -43,6 +51,6 @@ export default {
     extend(config) {
       config.resolve.alias['node-fetch-native'] = require.resolve('node-fetch')
     },
-    // standalone: true,
+    standalone: true,
   },
 }

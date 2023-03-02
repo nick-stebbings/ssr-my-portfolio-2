@@ -74,11 +74,12 @@ export default {
       headerTitles: projectHeaders.web3,
       hoveredLayer: 'web3',
       activeLayer: 'web3',
+      projectHeaders
     }
   },
   computed: {
     isMobile() {
-      return !(this.$device.isMobile || this.$device.isTablet)
+      return (this.$device.isMobile || this.$device.isTablet)
     },
     isDesktop() {
       return (this.$device.isDesktop)
@@ -91,10 +92,6 @@ export default {
     },
     // // First articles title state
     activeFirstSection() { return this.activeLayer === this.hoveredLayer },
-
-    setHeaderTitles(pageName) {
-      this.headerTitles = this.projectHeaders[pageName]
-    }
   },
   mounted() {
     const options = {
@@ -107,6 +104,9 @@ export default {
     targets.forEach((target) => observer.observe(target))
   },
   methods: {
+    setHeaderTitles(pageName) {
+      this.headerTitles = this.projectHeaders[pageName]
+    },
     // Nav state controller functions
     // Hamburger
     switchPage(e) {
@@ -115,7 +115,7 @@ export default {
     },
     // Desktop
     switchToLayer(layerName) {
-      setHeaderTitles(layerName)
+      this.setHeaderTitles(layerName)
       document.querySelectorAll('.bg-svg')[0].classList.remove('active')
       document.querySelectorAll('.bg-svg')[1].classList.remove('active')
       document.querySelectorAll('.bg-svg')[2].classList.add('active')
@@ -123,12 +123,13 @@ export default {
       this.activeLayer = layerName
     },
     hoverLayerActive(layerName) {
+      debugger;
       const subNav = document.querySelector('nav')
 
       clearTimeout(this.currentHeaderChangeSetTimeout)
       this.currentHeaderChangeSetTimeout = setTimeout(
         () => {
-          setHeaderTitles(layerName)
+          this.setHeaderTitles(layerName)
         },
         layerName !== this.activeLayer ? 0 : 0
       )

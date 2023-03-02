@@ -64,4 +64,10 @@ button#return-home {
   position: absolute;
   right: var(--margin-x);
 }
+
+@media (min-width: 1680px) {
+  button#return-home {
+    right: 0;
+  }
+}
 </style>

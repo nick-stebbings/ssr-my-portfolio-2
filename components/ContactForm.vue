@@ -33,7 +33,6 @@ function handleSubmit(e) {
   const formData = new FormData(form);
   const object = Object.fromEntries(formData);
   const json = JSON.stringify(object);
-  debugger;
   fetch("https://api.web3forms.com/submit", {
     method: "POST",
     headers: {

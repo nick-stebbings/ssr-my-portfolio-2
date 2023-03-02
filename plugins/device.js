@@ -6,7 +6,6 @@ export default (ctx, inject) => {
   const customIsTablet =
     ctx.$device.isTablet || (userAgent && userAgent.includes('iPad'))
 
-    console.log('ctx :>> ', ctx);
   inject('device', {
     env: ctx.isDev,
     isTablet: customIsTablet,
