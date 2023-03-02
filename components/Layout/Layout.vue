@@ -131,6 +131,12 @@ button#skip-intro:hover {
   flex-direction: column;
 }
 
+@media (min-width: 480px) {
+  h1.hero-header {
+    margin-left: 25%;
+  }
+}
+
 /* Medium viewport */
 @media (min-width: 768px) {
   :root {
@@ -186,7 +192,7 @@ button#skip-intro:hover {
   :root {
     --margin-x: calc((100vw - var(--svg-max-w-px)) / 2 + 1.2 * var(--svg-x-px));
     --header-left: calc(var(--margin-x) + 400px);
-
+    --gutter-x: 3rem;
     --margin-y: 4rem;
     --h1-line-height: 1.5;
     --h2-line-height: 1.4;

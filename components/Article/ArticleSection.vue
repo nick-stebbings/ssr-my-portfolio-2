@@ -57,9 +57,18 @@ section.article-section.summary {
 }
 
 section.article-section.para:nth-of-type(2n) {
-  background-position: right;
   background-image: url('~/assets/images/bg/page-nav-bg-right.png');
+  background-position: right;
   background-size: var(--bg-size);
+  padding: 0 var(--gutter-x) 0 0;
+}
+
+section.article-section.para:nth-of-type(2n+1) .figure {
+  padding: var(--margin-y) 0 0 var(--gutter-x);
+}
+
+section.article-section.para:nth-of-type(2n) .figure {
+  padding: var(--margin-y) var(--gutter-x) 0 0;
 }
 
 section.article-section.paras {
@@ -67,7 +76,10 @@ section.article-section.paras {
 }
 
 section.article-section.para:nth-of-type(2n + 1) {
-  padding: 0 var(--gutter-x-right) 0 var(--gutter-x);
+  padding: 0 0 0 var(--gutter-x);
+  background-position: left;
+  background-size: var(--bg-size);
+  background-image: url('~/assets/images/bg/page-nav-bg-left.png');
 }
 
 section.article-section .copy {
@@ -154,7 +166,17 @@ main>section[data-active='false'] img {
   }
 }
 
+@media (min-width: 1024px) {
+  p {
+    padding: 0;
+  }
+}
+
 @media (min-width: 1281px) {
+  p {
+    padding: 0;
+  }
+
   section.article-section .image {
     display: flex;
     flex-basis: 100%;
@@ -205,7 +227,8 @@ main>section[data-active='false'] img {
   }
 
   .page article .article-section .figure {
-    padding-right: 3rem;
+    padding-right: var(--gutter-x);
+    padding-right: var(--gutter-x);
     max-width: 20vw;
     background-repeat: repeat-y;
     background-position: right;
@@ -214,7 +237,7 @@ main>section[data-active='false'] img {
 
   .page article .article-section:nth-child(2n + 1) .figure {
     padding-right: initial;
-    padding-left: 3rem;
+    padding-left: var(--gutter-x);
     background-position: left;
     align-items: flex-end;
     justify-content: center;

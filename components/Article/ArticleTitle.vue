@@ -92,7 +92,7 @@ header.article-title.left {
 header.article-title.left h1,
 header.article-title.left h2 {
   text-align: left;
-  padding-left: 3rem;
+  padding-left: var(--gutter-x);
 }
 
 header.article-title.right h1,
@@ -186,7 +186,7 @@ header.article-title.left h2 {
 
   header.article-title.right h1,
   header.article-title.right h2 {
-    padding-right: 3rem;
+    padding-right: var(--gutter-x);
     margin: 0;
   }
 

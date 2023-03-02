@@ -173,6 +173,7 @@ article .article-tools {
     width: 100%;
     height: auto;
     justify-content: start;
+    padding: 0;
   }
 
   .article-content-wrapper {

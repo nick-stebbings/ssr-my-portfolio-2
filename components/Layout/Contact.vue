@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     scrollHome: function () {
-      document.querySelector('section.anim-to-nav').scrollIntoView();
+      document.querySelector('.layout').scrollIntoView();
     }
   },
   components: {
@@ -61,5 +61,7 @@ button#return-home {
   display: flex;
   margin-top: var(--margin-y);
   justify-content: flex-end;
+  position: absolute;
+  right: var(--margin-x);
 }
 </style>

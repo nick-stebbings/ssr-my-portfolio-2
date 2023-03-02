@@ -292,6 +292,10 @@ section.article-tools .tools-content ul li {
     padding: 0;
   }
 
+  section.article-section.para:nth-of-type(2n) {
+    margin-top: var(--margin-y)
+  }
+
   section.article-tools .langs-libs {
     padding-right: 0;
   }
