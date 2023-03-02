@@ -145,7 +145,7 @@ header.article-title.right h2::before {
 }
 
 .case-study .article-title.right h2::before {
-  background-position: left;
+  background-position: right;
 }
 
 header.article-title h2 {

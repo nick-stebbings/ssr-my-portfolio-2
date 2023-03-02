@@ -166,13 +166,9 @@ main>section[data-active='false'] img {
   }
 }
 
-@media (min-width: 768px) {
-  p {
-    padding: var(--margin-x);
-  }
-}
+@media (min-width: 768px) {}
 
-@media (min-width: 1281px) {
+@media (min-width: 1280px) {
   p {
     padding: 0;
   }

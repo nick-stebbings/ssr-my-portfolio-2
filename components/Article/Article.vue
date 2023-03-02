@@ -46,6 +46,7 @@ export default {
     const expandCaseStudy = document.querySelector('.case-study')
     const expandCaseStudyBtns = document.querySelectorAll('.case-study header')
     const carouselCaseStudies = document.querySelectorAll('.carousel.slide')
+
     expandCaseStudyBtns.forEach((btn, i) => {
       btn.addEventListener('click', () => {
         carouselCaseStudies[i].style.height = btn.classList.contains('active')
@@ -81,6 +82,7 @@ button.return-home-up:hover {
 
 .article-content-wrapper {
   margin-top: 2rem;
+  padding-top: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows:

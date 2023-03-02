@@ -28,8 +28,8 @@
       </section>
     </template>
     <template #article-sections>
-      <section v-for="(project, i) in activeProjects" :id="'section-' + i" :key="i" :slot="'section-' + i"
-        :class="'project section-' + +(i + 1)" :data-active="activeFirstSection">
+      <section v-for="(project, i) in activeProjects" :id="'section-' + i" :name="'section-' + i" :key="i"
+        :slot="'section-' + i" :class="'project section-' + +(i + 1)" :data-active="activeFirstSection">
         <Article :details="project" :slide="slide"></Article>
       </section>
     </template>
@@ -107,6 +107,7 @@ export default {
     targets.forEach((target) => observer.observe(target))
 
     const logo = document.getElementById('logo');
+    if (!logo) return
     logo.addEventListener('click', () => {
       this.setHeaderTitles('default');
       this.showHero()
@@ -188,6 +189,13 @@ export default {
           const page4 = document.getElementById('section-3')
           page4.scrollIntoView()
           break
+      }
+      // remove fragment as much as it can go without adding an entry in browser history:
+      window.location.replace("#");
+
+      // slice off the remaining '#' in HTML5:    
+      if (typeof window.history.replaceState == 'function') {
+        history.replaceState({}, '', window.location.href.slice(0, -1));
       }
 
       if (direction == 'top' && this.$device.isDesktop) {

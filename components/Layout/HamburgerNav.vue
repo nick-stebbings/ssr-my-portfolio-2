@@ -5,10 +5,10 @@
     </button>
     <nav class="nav-menu" :class="{ 'is-active': navOpen }">
       <ul>
-        <li><a href="#" @click="toggleNav() && switchPage($event)">e-learning</a></li>
-        <li><a href="#" @click="toggleNav() && switchPage($event)">e-commerce</a></li>
-        <li><a href="#" @click="toggleNav() && switchPage($event)">web3</a></li>
-        <li><a href="#" @click="toggleNav() && switchPage($event)">book me</a></li>
+        <li><a href="#section-0" @click="toggleNav() && switchPage($event)">e-learning</a></li>
+        <li><a href="#section-0" @click="toggleNav() && switchPage($event)">e-commerce</a></li>
+        <li><a href="#section-0" @click="toggleNav() && switchPage($event)">web3</a></li>
+        <li><a href="#contact" @click="toggleNav() && switchPage($event)">book me</a></li>
       </ul>
     </nav>
   </div>

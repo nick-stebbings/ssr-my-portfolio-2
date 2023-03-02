@@ -36,7 +36,8 @@ body,
 
 /* Default styles */
 :root {
-  --hero-height: 50vh;
+  --hero-height: 90vh;
+  --hero-top-margin: 0;
   --margin-x: 1rem;
   --gutter-x: 1rem;
   --gutter-x-right: 1rem;
@@ -72,11 +73,12 @@ body,
 }
 
 .layout {
+  /* width: 100vw; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: stretch;
-  gap: var(--margin-x) var(--margin-y);
+  gap: calc(2*var(--margin-x));
   position: absolute;
   top: 0;
   bottom: 0;
@@ -93,7 +95,7 @@ main>section:not(.anim-to-nav) {
 }
 
 h1.hero-header {
-  margin-left: 35%;
+  margin-left: 50%;
 }
 
 section[slot^="section-"]>* {
@@ -156,17 +158,18 @@ button#skip-intro:hover {
 @media (min-width: 768px) {
   :root {
     --header-left: calc(var(--margin-x) + 320px);
-
+    --margin-x: 1.5rem;
     --margin-y: 2rem;
     --h1-line-height: 1.3;
     --h2-line-height: 1.2;
     /* --h1-margin: 3rem 0 2rem;
     */
     --h2-margin: 2.5rem;
+    --hero-height: 80vh;
   }
 
   h1.hero-header {
-    margin-left: 15%;
+    margin-left: 8%;
   }
 }
 

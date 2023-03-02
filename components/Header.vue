@@ -125,6 +125,7 @@ h1.inactive {
     font-size: 5.0625em;
     /* 81.5px */
     /* margin-bottom: 1.5rem; */
+    /* margin-bottom: 1.5rem; */
   }
 
   h3 {
@@ -134,7 +135,7 @@ h1.inactive {
 }
 
 
-@media (min-width: 1281px) {
+@media (min-width: 1280px) {
 
   h1 {
     font-size: 7.59375em;

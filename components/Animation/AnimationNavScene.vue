@@ -719,4 +719,8 @@ export default {
 header {
   transition: 0.7s opacity ease 0s;
 }
+
+a:hover {
+  text-decoration: none;
+}
 </style>

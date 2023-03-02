@@ -145,8 +145,8 @@ export default {
         header.style.opacity = '1'
         header.style.visibility = 'visible'
 
-        // const firstArticle = document.querySelector(".project.section-1");
-        // firstArticle.style['margin-top'] = '-6rem';
+        const firstArticle = document.querySelector(".project.section-1");
+        if (firstArticle) { firstArticle.style['margin-top'] = '-6rem'; }
 
         const hero = document.querySelector(".hero-container");
         hero.style.visibility = 'visible'
