@@ -42,10 +42,10 @@ body,
   --p-font-size: 16px;
   --p-line-height: 1.5em;
   --p-tracking: 1px;
-  --h1-line-height: 1.2;
+  --h1-line-height: 1.1;
   --h2-line-height: 1.1;
-  --h1-margin: 2rem 0 1rem;
-  --h2-margin: 1.5rem 0 0.5rem;
+  --h1-margin: 4rem;
+  --h2-margin: 1.5rem;
   --header-padding: 0;
 
   --section-padding: 2rem;
@@ -84,6 +84,10 @@ main>section:not(.anim-to-nav) {
   padding: 0 var(--margin-x);
 }
 
+h1.hero-header {
+  margin-left: 35%;
+}
+
 section[slot^="section-"]>* {
   margin: 0;
   padding: 0;
@@ -91,7 +95,7 @@ section[slot^="section-"]>* {
 }
 
 .project.section-1 {
-  margin-top: 24rem;
+  margin-top: 0rem;
   transition: 1s all ease-out;
 }
 
@@ -135,8 +139,12 @@ button#skip-intro:hover {
     --margin-y: 2rem;
     --h1-line-height: 1.3;
     --h2-line-height: 1.2;
-    --h1-margin: 3rem 0 2rem;
-    --h2-margin: 2.5rem 0 1.5rem;
+    /* --h1-margin: 3rem 0 2rem;
+    --h2-margin: 2.5rem 0 1.5rem; */
+  }
+
+  h1.hero-header {
+    margin-left: 15%;
   }
 }
 
@@ -165,6 +173,11 @@ button#skip-intro:hover {
 
   #contact-wrapper {
     flex-direction: row;
+  }
+
+  .project.section-1 {
+    margin-top: 24rem;
+    transition: 1s all ease-out;
   }
 }
 

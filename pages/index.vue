@@ -76,7 +76,7 @@ export default {
   },
   computed: {
     isMobile() {
-      return (this.$device.isMobile || this.$device.isTablet)
+      return !(this.$device.isMobile || this.$device.isTablet)
     },
     isDesktop() {
       return (this.$device.isDesktop)
@@ -168,8 +168,8 @@ export default {
           break
       }
 
-      if (direction == 'top') {
-        const page0 = document.querySelector('.anim-to-nav')
+      if (direction == 'top' && this.$device.isDesktop) {
+        const page0 = document.querySelector('.layout')
         page0.scrollIntoView()
       }
     },

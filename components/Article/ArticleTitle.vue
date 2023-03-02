@@ -26,11 +26,6 @@ header.article-title {
   position: relative;
 }
 
-header.article-title.left {
-  width: 100%;
-  align-items: flex-start;
-}
-
 header.article-title.right {
   align-items: flex-end;
   padding: 0;
@@ -82,10 +77,16 @@ header.article-title.right {
 header.article-title h1,
 header.article-title h2 {
   font-family: 'Merriweather', 'Georgia', serif;
-  margin: 0;
+  /* margin: 0; */
   padding: 0;
   font-weight: 500;
   width: 100%;
+}
+
+header.article-title.left {
+  width: 100%;
+  align-items: flex-start;
+  margin-bottom: var(--h1-margin);
 }
 
 header.article-title.left h1,
@@ -96,7 +97,7 @@ header.article-title.left h2 {
 
 header.article-title.right h1,
 header.article-title.right h2 {
-  margin: 1rem 0 0 0;
+  /* margin: 1rem 0 0 0; */
   text-align: right;
 }
 
@@ -107,7 +108,7 @@ header.article-title.right:not(.active) h2 {
 header.article-title h1 {
   color: #3c3c3c;
   font-size: 1.5em;
-  line-height: 1rem;
+  line-height: var(--h1-line-height);
   margin-bottom: 0.75rem;
 }
 

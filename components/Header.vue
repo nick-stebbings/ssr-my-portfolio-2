@@ -46,7 +46,7 @@ h2 {
 h2,
 h3,
 form label {
-  font-family: "Rubik", "Roboto", "Arial", "sans-serif";
+  font-family: "Rubik", "Roboto", "Arial", "sans-serif" !important;
 }
 
 h1 {

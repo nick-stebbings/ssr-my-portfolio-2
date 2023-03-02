@@ -1,9 +1,9 @@
 <template>
   <div class="hero-container">
     <div>
-      <h1 class="display-4">{{ heading }}</h1>
-      <h2 class="lead my-4">{{ subheading }}</h2>
-      <a href="#" class="btn btn-primary btn-lg">{{ buttonText }}</a>
+      <h1 class="hero-header">{{ heading }}</h1>
+      <h2 class="hero-subheader">{{ subheading }}</h2>
+      <a href="#contact" class="btn btn-primary btn-lg">{{ buttonText }}</a>
     </div>
     <slot name="static-bg"></slot>
   </div>
@@ -37,13 +37,24 @@ div {
 
 div.hero-container {
   min-height: var(--hero-height);
-  /* margin-top: var(--margin-top); */
   padding: 0 var(--margin-x) 0 var(--header-left);
 }
 
-h1.display-4,
-h2 {
+h1.hero-header,
+h2.hero-subheader {
   text-align: right;
+  font-family: "Rubik", "Roboto", "Arial", "sans-serif" !important;
+}
+
+h1.hero-header {
+  margin-top: var(--h1-margin);
+  font-size: 4rem;
+  line-height: var(--h1-line-height);
+}
+
+h2.hero-subheader,
+a {
+  margin-top: var(--h2-margin);
 }
 
 div.hero-container>div:first-child {
@@ -71,7 +82,7 @@ div.hero-container>div:first-child {
     padding: 0 var(--margin-x) 0 var(--header-left);
   }
 
-  h1.display-4 {
+  h1.hero-header {
     font-size: 4rem;
   }
 
@@ -81,11 +92,11 @@ div.hero-container>div:first-child {
 }
 
 @media (min-width: 1680px) {
-  h1.display-4 {
+  h1.hero-header {
     font-size: 5rem;
   }
 
-  h2.lead {
+  h2.hero-subheader {
     font-size: 2.5rem;
   }
 }

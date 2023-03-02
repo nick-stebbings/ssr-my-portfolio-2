@@ -1,5 +1,5 @@
 <template>
-  <section id="contact">
+  <section id="contact" name="contact">
     <div id="contact-wrapper">
       <button id="return-home" @click="scrollHome">
         <ArrowCircleUpIcon />

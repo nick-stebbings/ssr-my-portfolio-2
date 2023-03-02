@@ -1,10 +1,8 @@
 <template>
-  <div class="hamburger-nav">
-    <div class="hamburger-icon" @click="toggleNav">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+  <div class="hamburger-nav" :class="{ 'is-active': navOpen }">
+    <button type="button" class="hamburger-icon" :class="{ 'is-active': navOpen }" @click="toggleNav">
+      <MenuAlt3Icon />
+    </button>
     <nav class="nav-menu" :class="{ 'is-active': navOpen }">
       <ul>
         <li><a href="#" @click="toggleNav() && switchPage($event)">e-learning</a></li>
@@ -17,6 +15,8 @@
 </template>
 
 <script>
+import { MenuAlt3Icon } from "@vue-hero-icons/outline"
+
 export default {
   data() {
     return {
@@ -32,6 +32,9 @@ export default {
       return true;
     },
   },
+  components: {
+    MenuAlt3Icon
+  }
 };
 </script>
 
@@ -73,6 +76,10 @@ export default {
     padding: 0;
   }
 
+  .hamburger-nav.is-active {
+    background-color: white !important;
+  }
+
   .nav-menu li {
     margin-bottom: 1rem;
   }
@@ -100,30 +107,15 @@ export default {
     width: 2rem;
     height: 1.5rem;
     cursor: pointer;
+    background: transparent;
+    border: 0;
+    transform: scale(1.5);
   }
 
-  .hamburger-icon span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #3c3c3c;
-    transition: transform 0.2s ease-in-out;
-  }
 
-  .hamburger-icon span:not(:last-child) {
-    margin-bottom: 0.5rem;
-  }
 
-  .hamburger-icon.is-active span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-  }
-
-  .hamburger-icon.is-active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger-icon.is-active span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
+  .hamburger-icon.is-active {
+    transform: scale(1.5) rotate(90deg);
   }
 }
 </style>
