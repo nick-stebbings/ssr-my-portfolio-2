@@ -40,8 +40,8 @@ export default {
 #contact-wrapper h1 {
   margin: var(--margin-y) 0;
   font-family: "Rubik", "Roboto", "Arial", "sans-serif";
-  font-size: 5.0625em;
-  font-weight: 500;
+  font-size: 3.375rem;
+  font-weight: 300;
   text-transform: capitalize;
   line-height: 5.375rem;
   width: 50%;

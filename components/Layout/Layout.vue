@@ -104,6 +104,10 @@ section[slot^="section-"]>* {
   font-size: var(--section-font-size, 1rem);
 }
 
+.project {
+  max-width: 100vw;
+}
+
 .project.section-1 {
   margin-top: 0rem;
   transition: 1s all ease-out;
@@ -165,7 +169,7 @@ button#skip-intro:hover {
     /* --h1-margin: 3rem 0 2rem;
     */
     --h2-margin: 2.5rem;
-    --hero-height: 80vh;
+    --hero-height: 60vh;
   }
 
   h1.hero-header {
@@ -186,6 +190,8 @@ button#skip-intro:hover {
     --h1-margin: 4rem 0 3rem;
     --h2-margin: 3.5rem;
     --header-padding: 0 6rem;
+
+    --hero-height: auto;
   }
 
   main>section:not(.anim-to-nav) {
@@ -207,7 +213,8 @@ button#skip-intro:hover {
   }
 
   .project.section-1 {
-    margin-top: 24rem;
+    /* margin-top: 24rem; */
+    margin-top: 0rem;
     transition: 1s all ease-out;
   }
 }

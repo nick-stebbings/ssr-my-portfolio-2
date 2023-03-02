@@ -131,9 +131,7 @@ export default {
       skipBtn.style.visibility = 'invisible'
 
       setTimeout(function () {
-        // bypass this on mobile TODO
         const staticNav = document.getElementById('#animation-wrapper-static')
-
         if (staticNav) return
 
         const element = document.querySelector('nav.page-nav-container')
@@ -146,7 +144,9 @@ export default {
         header.style.visibility = 'visible'
 
         const firstArticle = document.querySelector(".project.section-1");
-        if (firstArticle) { firstArticle.style['margin-top'] = '-6rem'; }
+        if (firstArticle) {
+          firstArticle.style['margin-top'] = '-6rem';
+        }
 
         const hero = document.querySelector(".hero-container");
         hero.style.visibility = 'visible'

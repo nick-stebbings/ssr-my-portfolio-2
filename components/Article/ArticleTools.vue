@@ -263,7 +263,7 @@ section.article-tools .tools-content ul li {
   }
 
   section.article-tools .tools-titles {
-    justify-content: start;
+    justify-content: flex-start;
   }
 
   section.article-tools .tools-titles h2 {
