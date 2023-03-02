@@ -42,6 +42,7 @@ section.article-section {
   background-repeat: repeat-y;
   display: flex;
   justify-content: flex-end;
+  margin-bottom: var(--margin-y);
 }
 
 section.article-section img {

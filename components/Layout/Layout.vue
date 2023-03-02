@@ -35,7 +35,7 @@ body,
   --margin-x: 1rem;
   --gutter-x: 1rem;
   --gutter-x-right: 1rem;
-  --margin-y: 1rem;
+  --margin-y: 1.5rem;
   --bg-size: 12px;
   --btn-scale: scale(2);
 

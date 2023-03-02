@@ -56,10 +56,6 @@ header.article-title.right {
   background-image: url('~/assets/images/icons/contract-icon.png');
 }
 
-.case-study header.active.article-title h2::before {
-  /* background-position: right; */
-}
-
 .case-study header.article-title:hover {
   cursor: pointer;
 }
@@ -170,6 +166,9 @@ header.article-title.left h2 {
 }
 
 @media (min-width: 1280px) {
+  .case-study header.active.article-title h2::before {
+    background-position: right;
+  }
 
   header.article-title.right h1,
   header.article-title.right h2 {

@@ -142,12 +142,16 @@ article .article-tools {
   flex-direction: column;
 }
 
-.section.article-section.para {
+.article.para {
   display: flex;
 }
 
+.article-section.para:nth-of-type(2n+ 1) {
+  flex-direction: row-reverse;
+}
+
 @media only screen and (max-width: 1280px) {
-  .section.article-section.para {
+  section.article-section.para {
     margin-bottom: 0;
   }
 

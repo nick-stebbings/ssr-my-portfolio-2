@@ -1,7 +1,7 @@
 <script setup></script>
 <template>
-  <div class="case-study" style="max-width: 1280px;">
-    <b-carousel fade no-wrap ref="myCarousel" id="case-study-carousel" img-width="1280px">
+  <div class="case-study" style="max-width: 1024px;">
+    <b-carousel fade no-wrap ref="myCarousel" id="case-study-carousel" img-width="1024px">
       <b-carousel-slide alt="App screens Slide" v-lazy-load
         img-src="~/assets/images/casestudyframes/habitfract1/1.png"></b-carousel-slide>
       <b-carousel-slide alt="Title Slide" v-lazy-load
@@ -62,7 +62,7 @@ export default {
 
 .case-study.active .carousel-control-prev,
 .case-study.active .carousel-control-next {
-  top: -3rem;
+  top: -3.5rem;
   display: block;
 }
 
