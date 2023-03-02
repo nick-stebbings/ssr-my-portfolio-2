@@ -37,9 +37,9 @@ export default {
 
 #contact-wrapper h1 {
   margin: var(--margin-y) 0;
-  font-family: "Londrina Solid", "Roboto", "Arial", "sans-serif";
+  font-family: "Rubik", "Roboto", "Arial", "sans-serif";
   font-size: 5.0625em;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: capitalize;
   line-height: 5.375rem;
   width: 50%;

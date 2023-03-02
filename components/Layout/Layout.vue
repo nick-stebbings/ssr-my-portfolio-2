@@ -1,6 +1,7 @@
 <template>
   <main class="layout">
     <slot name="nav"></slot>
+    <!-- <slot name="logo"></slot> -->
     <slot name="hero"></slot>
     <slot name="animation"> </slot>
     <slot name="article-sections"></slot>
@@ -18,6 +19,10 @@ html,
 body {
   padding: 0;
   margin: 0 !important;
+}
+
+body {
+  font-family: 'Rubik', 'Roboto' !important;
 }
 
 body,

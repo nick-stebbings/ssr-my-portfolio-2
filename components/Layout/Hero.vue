@@ -50,11 +50,13 @@ h1.hero-header {
   margin-top: var(--h1-margin);
   font-size: 4rem;
   line-height: var(--h1-line-height);
+  font-weight: 400;
 }
 
 h2.hero-subheader,
 a {
   margin-top: var(--h2-margin);
+  font-weight: 300;
 }
 
 div.hero-container>div:first-child {

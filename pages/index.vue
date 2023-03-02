@@ -1,6 +1,8 @@
 <template>
   <Layout>
-    <Logo></Logo>
+    <template v-if="isMobile" #logo>
+      <Logo></Logo>
+    </template>
     <template v-if="isMobile" #nav>
       <HamburgerNav :switch-page="switchPage"></HamburgerNav>
     </template>

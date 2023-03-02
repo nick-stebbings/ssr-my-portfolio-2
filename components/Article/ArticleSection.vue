@@ -162,13 +162,13 @@ main>section[data-active='false'] img {
   }
 
   section.article-section .image img {
-    width: 50vw;
+    max-height: 30vh;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   p {
-    padding: 0;
+    padding: var(--margin-x);
   }
 }
 

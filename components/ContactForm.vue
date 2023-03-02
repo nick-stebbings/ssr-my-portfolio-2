@@ -19,22 +19,21 @@
         <input required type="textarea" class="form-control" id="inputMessage" name="message" />
       </div>
     </div>
-    <button type="submit" class="btn btn-outline-light btn-lg mt-3" data-bs-toggle="modal"
+    <button v-b-modal.modal-1 type="submit" class="btn btn-outline-light btn-lg mt-3" data-bs-toggle="modal"
       data-bs-target="#contactConfirmation">Send</button>
   </form>
 </template>
 <script setup>
 function handleSubmit(e) {
   const form = e.currentTarget;
-  const modalTitle = document.querySelector("#contactConfirmationLabel");
+  const modalTitle = document.querySelector(".modal-title");
   const modalBody = document.querySelector(".modal-body");
   const modalButton = document.querySelector(".modal-footer button");
   e.preventDefault();
-  debugger;
   const formData = new FormData(form);
   const object = Object.fromEntries(formData);
   const json = JSON.stringify(object);
-
+  debugger;
   fetch("https://api.web3forms.com/submit", {
     method: "POST",
     headers: {
