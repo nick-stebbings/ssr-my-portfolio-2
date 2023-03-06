@@ -123,6 +123,28 @@ export default {
   methods: {
     setHeaderTitles(pageName) {
       this.headerTitles = this.projectHeaders[pageName]
+      setTimeout(() => {
+        const expandCaseStudy = document.querySelector('.case-study')
+        const expandCaseStudyBtns = document.querySelectorAll('.case-study header')
+        const carouselCaseStudies = document.querySelectorAll('.carousel.slide')
+        expandCaseStudyBtns.forEach((btn, i) => {
+          if (btn.getAttribute('listener') !== 'true') {
+
+            btn.addEventListener('click', () => {
+              carouselCaseStudies[i].style.height = btn.classList.contains('active')
+                ? '0'
+                : 'auto'
+              document.querySelector(".carousel").style['grid-column-start'] = btn.classList.contains('active')
+                ? '1'
+                : '-1'
+
+              expandCaseStudy.classList.toggle('active')
+              btn.classList.toggle('active')
+            })
+            btn.setAttribute('listener', 'true');
+          }
+        })
+      }, 500);
     },
     // Nav state controller functions
     // Hamburger
@@ -183,26 +205,30 @@ export default {
         return
 
       // if in hover state, change layer
-      // debugger;
       switch (articleName) {
         case 'bookme':
           const form = document.getElementById('contact-wrapper')
+          if (!form) return
           form.scrollIntoView()
           break
         case 'first':
           const page1 = document.getElementById('section-0')
+          if (!page1) return
           page1.scrollIntoView()
           break
         case 'second':
           const page2 = document.getElementById('section-1')
+          if (!page2) return
           page2.scrollIntoView()
           break
         case 'third':
           const page3 = document.getElementById('section-2')
+          if (!page3) return
           page3.scrollIntoView()
           break
         case 'fourth':
           const page4 = document.getElementById('section-3')
+          if (!page4) return
           page4.scrollIntoView()
           break
       }

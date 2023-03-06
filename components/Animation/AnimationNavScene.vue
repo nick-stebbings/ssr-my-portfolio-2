@@ -258,7 +258,7 @@
         transform="matrix(.819152-.573576 0.573576 0.819152 279.841768 655.52125)" fill="#474342" stroke-width="0">
         <a href="#contact">
           <tspan y="0" font-weight="600" stroke-width="0">
-            book me
+            contact
           </tspan>
         </a>
       </text>

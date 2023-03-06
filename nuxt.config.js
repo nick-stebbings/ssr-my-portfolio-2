@@ -2,7 +2,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     css: ['./assets/styles/main.css'],
-    title: 'Nick Stebb (Design Portfolio)',
+    title: 'Nick Stebbings (Design Portfolio)',
     htmlAttrs: {
       lang: 'en',
     },

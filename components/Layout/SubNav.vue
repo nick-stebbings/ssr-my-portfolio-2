@@ -28,18 +28,18 @@ export default {
     },
   },
   mounted: function () {
-    const navBtns = document.querySelectorAll('.page-nav-btn')
-    const headerLinks = document.querySelectorAll('span.header-link')
+    // const navBtns = document.querySelectorAll('.page-nav-btn')
+    // const headerLinks = document.querySelectorAll('span.header-link')
 
-    if (!navBtns?.length || !headerLinks?.length) return;
-    navBtns.forEach((btn, i) => {
-      btn.addEventListener('mouseover', () => {
-        headerLinks[i].style['text-decoration'] = 'underline'
-      })
-      btn.addEventListener('mouseout', () => {
-        headerLinks[i].style['text-decoration'] = 'initial'
-      })
-    })
+    // if (!navBtns?.length || !headerLinks?.length) return;
+    // navBtns.forEach((btn, i) => {
+    //   btn.addEventListener('mouseover', () => {
+    //     headerLinks[i].style['text-decoration'] = 'underline'
+    //   })
+    //   btn.addEventListener('mouseout', () => {
+    //     headerLinks[i].style['text-decoration'] = 'initial'
+    //   })
+    // })
 
   },
 }
@@ -154,6 +154,10 @@ header.inactive+.page-nav-container .page-nav-btn {
   text-transform: capitalize;
 }
 
+.page-nav-container.hovered {
+  transition: all 0.3s;
+}
+
 .page-nav-container.hovered::before,
 .page-nav-container.hovered::after {
   content: ''
@@ -168,7 +172,7 @@ header.inactive+.page-nav-container .page-nav-btn {
     align-items: flex-end;
     z-index: 104;
     gap: 0;
-    width: 5vw;
+    width: 4vw;
   }
 
   .page-nav-container::before,

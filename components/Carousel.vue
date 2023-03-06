@@ -80,13 +80,13 @@ export default {
 
 .case-study .carousel-control-prev {
   left: initial;
-  right: 55%;
+  right: 61%;
   background-image: url('~/assets/images/icons/left-icon.png');
 }
 
 .case-study .carousel-control-next {
   right: initial;
-  left: 55%;
+  left: 40%;
   background-image: url('~/assets/images/icons/right-icon.png');
 }
 
@@ -107,6 +107,11 @@ export default {
 .case-study>header.active+.carousel {
   overflow: initial;
   margin-left: 0;
+}
+
+.case-study.active {
+  height: 768px;
+  width: auto;
 }
 
 .case-study>.article-title.active+.carousel .carousel-indicators {

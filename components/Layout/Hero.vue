@@ -69,7 +69,7 @@ export default {
     },
     buttonText: {
       type: String,
-      default: 'Book Me'
+      default: "Let's Talk"
     }
   }
 }
@@ -159,17 +159,14 @@ div.hero-container>div:first-child {
   display: none;
 }
 
-.icon-container {
-  color: #3c3c3c;
-}
-
 .icon-svg {
   width: 4rem;
   height: 4rem;
 }
 
 .icon-container {
-  justify-content: center;
+  color: #3c3c3c;
+  justify-content: flex-end;
   align-items: center;
   display: flex;
   padding: 0 var(--gutter-x);

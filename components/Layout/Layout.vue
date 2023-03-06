@@ -118,6 +118,7 @@ section[slot^="section-"]>* {
 
 .page-nav-container {
   right: var(--margin-x) !important;
+  transition: all 0.3s;
 }
 
 .page-nav-container.default {

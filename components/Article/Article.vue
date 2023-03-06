@@ -43,21 +43,6 @@ export default {
     slide: Function,
   },
   mounted: () => {
-    const expandCaseStudy = document.querySelector('.case-study')
-    const expandCaseStudyBtns = document.querySelectorAll('.case-study header')
-    const carouselCaseStudies = document.querySelectorAll('.carousel.slide')
-    console.log('expandCaseStudy :>> ', expandCaseStudy);
-
-    expandCaseStudyBtns.forEach((btn, i) => {
-      btn.addEventListener('click', () => {
-        carouselCaseStudies[i].style.height = btn.classList.contains('active')
-          ? '0'
-          : 'auto'
-
-        expandCaseStudy.classList.toggle('active')
-        btn.classList.toggle('active')
-      })
-    })
   },
 }
 </script>
