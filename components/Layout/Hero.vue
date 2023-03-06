@@ -143,6 +143,7 @@ div.hero-container>div:first-child {
   left: 0;
   z-index: 50;
   padding: var(--margin-y) 0;
+  bottom: -4rem;
 }
 
 .icon-label,
@@ -167,7 +168,7 @@ div.hero-container>div:first-child {
 .icon-container {
   color: #3c3c3c;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-end;
   display: flex;
   padding: 0 var(--gutter-x);
 }
@@ -187,19 +188,14 @@ div.hero-container>div:first-child {
     display: flex;
   }
 
-  .hero-container {
-    opacity: 0;
-    visibility: hidden;
-    transition: .15s all ease-in;
-  }
-
 }
 
 @media (min-width: 768px) {
   .icons {
-    bottom: 4rem;
+    /* bottom: 4rem; */
     left: 50%;
   }
+
 }
 
 
@@ -207,6 +203,12 @@ div.hero-container>div:first-child {
 
   div.container-fluid {
     padding: 0 var(--margin-x) 0 var(--header-left);
+  }
+
+  .hero-container {
+    opacity: 0;
+    visibility: hidden;
+    transition: .15s all ease-in;
   }
 
   div.hero-container {
@@ -229,16 +231,6 @@ div.hero-container>div:first-child {
     align-items: center;
     width: 50%;
     margin: 0 auto;
-  }
-
-  .icons {
-    bottom: 50%;
-    right: 0;
-    flex-direction: column;
-    height: 12rem;
-    gap: 1rem;
-    justify-content: center;
-    margin: 0 auto 2.25rem auto;
   }
 
   .icon-label {
@@ -275,14 +267,39 @@ div.hero-container>div:first-child {
   }
 }
 
+
+.icons {
+  /* bottom: 50%; */
+  right: 0;
+  flex-direction: column;
+  height: 12rem;
+  gap: 1rem;
+  justify-content: center;
+  margin: 0 auto 2.25rem auto;
+  max-width: 93vw;
+}
+
 @media (max-height: 768px) {
   .cta-btns {
     margin: 12rem auto !important;
   }
 }
 
-@media (min-width: 1680px) {
+/* Short viewport */
+@media screen and (max-height: 1280px),
+screen and (min-width:1280px) {
+  .icons {
+    /* bottom: calc(var(--hero-height) - 2rem); */
+    left: var(--header-left);
+    right: var(--margin-x);
+    height: 12rem;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto 2.25rem auto;
+  }
+}
 
+@media (min-width: 1680px) {
   div.hero-container>div:first-child {
     padding: var(--margin-y) calc(var(--margin-x) + 4rem) 0 4rem;
     display: flex;
@@ -300,19 +317,6 @@ div.hero-container>div:first-child {
 
   h2.hero-subheader {
     font-size: 2.5rem;
-  }
-}
-
-/* Short viewport */
-@media (max-height: 1280px) {
-  .icons {
-    bottom: calc(var(--hero-height) - 2rem);
-    left: var(--header-left);
-    right: var(--margin-x);
-    height: 12rem;
-    flex-direction: row;
-    justify-content: center;
-    margin: 0 auto 2.25rem auto;
   }
 }
 </style>
