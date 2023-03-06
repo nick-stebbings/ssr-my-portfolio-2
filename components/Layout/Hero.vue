@@ -210,13 +210,14 @@ div.hero-container>div:first-child {
 
 }
 
+/* 
 @media (min-width: 768px) {
   .icons {
-    /* bottom: 4rem; */
+    bottom: 4rem;
     left: 50%;
   }
 
-}
+} */
 
 
 @media (min-width: 1280px) {
@@ -314,6 +315,13 @@ div.hero-container>div:first-child {
 }
 
 @media (min-width: 1680px) {
+  .icons {
+    right: 4rem;
+    left: initial;
+    top: calc(50% - 12rem);
+    flex-direction: column;
+  }
+
   div.hero-container>div:first-child {
     padding: var(--margin-y) calc(var(--margin-x) + 4rem) 0 4rem;
     display: flex;
