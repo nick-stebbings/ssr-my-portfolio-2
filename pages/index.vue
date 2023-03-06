@@ -123,34 +123,15 @@ export default {
   methods: {
     setHeaderTitles(pageName) {
       this.headerTitles = this.projectHeaders[pageName]
-      setTimeout(() => {
-        const expandCaseStudy = document.querySelector('.case-study')
-        const expandCaseStudyBtns = document.querySelectorAll('.case-study header')
-        const carouselCaseStudies = document.querySelectorAll('.carousel.slide')
-        expandCaseStudyBtns.forEach((btn, i) => {
-          if (btn.getAttribute('listener') !== 'true') {
-
-            btn.addEventListener('click', () => {
-              carouselCaseStudies[i].style.height = btn.classList.contains('active')
-                ? '0'
-                : 'auto'
-              document.querySelector(".carousel").style['grid-column-start'] = btn.classList.contains('active')
-                ? '1'
-                : '-1'
-
-              expandCaseStudy.classList.toggle('active')
-              btn.classList.toggle('active')
-            })
-            btn.setAttribute('listener', 'true');
-          }
-        })
-      }, 500);
+      setTimeout(this.bindCaseStudies, 500);
     },
     // Nav state controller functions
     // Hamburger
     switchPage(e) {
       const label = e.target.innerText.replace('-', '')
       this.activeLayer = label
+
+      setTimeout(this.bindCaseStudies, 500);
     },
     showHero() {
       const hero = document.querySelector(".hero-container");
@@ -182,6 +163,26 @@ export default {
       subNav.className = 'page-nav-container hovered ' + layerName
     },
 
+    bindCaseStudies() {
+      const expandCaseStudy = document.querySelector('.case-study')
+      const expandCaseStudyBtns = document.querySelectorAll('.case-study header')
+      const carouselCaseStudies = document.querySelectorAll('.carousel.slide')
+      expandCaseStudyBtns.forEach((btn, i) => {
+        if (btn.getAttribute('listener') !== 'true') {
+          btn.addEventListener('click', () => {
+            carouselCaseStudies[i].style.height = btn.classList.contains('active')
+              ? '0'
+              : 'auto'
+            // document.querySelector(".case-study").style['grid-column-start'] = btn.classList.contains('active')
+            //   ? '1'
+            //   : '-1'
+            expandCaseStudy.classList.toggle('active')
+            btn.classList.toggle('active')
+          })
+          btn.setAttribute('listener', 'true');
+        }
+      })
+    },
     slide(direction, articleName, event = null) {
       if (
         direction == 'top'

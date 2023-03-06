@@ -145,13 +145,13 @@ export default {
 
   .case-study .carousel-control-prev {
     left: 0;
-    bottom: 50%;
+    bottom: 60%;
     top: initial !important
   }
 
   .case-study .carousel-control-next {
     left: 0;
-    bottom: 40%;
+    bottom: 50%;
     top: initial !important;
   }
 }
