@@ -45,8 +45,8 @@ export default {
 
 @media only screen and (max-width: 1280px) {
   .hamburger-nav {
-    background-color: transparent;
     display: flex;
+    background-color: transparent;
     width: 100vw;
     justify-content: flex-end;
     padding: var(--margin-x);

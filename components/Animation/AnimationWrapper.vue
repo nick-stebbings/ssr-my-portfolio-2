@@ -167,22 +167,15 @@ export default {
   max-width: 1680px;
   margin: 0 auto;
   position: relative;
-  display: flex;
   flex-direction: column;
   display: none;
   padding: 0;
+  display: block;
 }
 
 #animation-wrapper>svg {
   overflow: initial;
   width: 100%;
   max-width: 1680px;
-}
-
-/* Media Queries */
-@media (min-width: 1281px) {
-  #animation-wrapper {
-    display: block;
-  }
 }
 </style>

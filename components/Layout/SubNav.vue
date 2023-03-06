@@ -130,7 +130,7 @@ header.inactive+.page-nav-container .page-nav-btn {
 .page-nav-container::before,
 .page-nav-container::after {
   position: absolute;
-  top: 0;
+  top: 2rem;
   left: 0;
   height: 4rem;
   width: 4rem;
@@ -141,17 +141,22 @@ header.inactive+.page-nav-container .page-nav-btn {
 
 .page-nav-container::before,
 .page-nav-container::after {
-  content: 'Click';
-  left: -20%;
-  top: -3rem;
+  content: 'Navigate';
+  left: -15%;
+  top: -1rem;
   text-transform: capitalize;
 }
 
 .page-nav-container::after {
   content: '->';
-  transform: rotate(90deg);
-  top: 0;
+  transform: rotate(45deg);
+  top: 2rem;
   text-transform: capitalize;
+}
+
+.page-nav-container.hovered::before,
+.page-nav-container.hovered::after {
+  content: ''
 }
 
 /* Short viewport */
@@ -164,6 +169,21 @@ header.inactive+.page-nav-container .page-nav-btn {
     z-index: 104;
     gap: 0;
     width: 5vw;
+  }
+
+  .page-nav-container::before,
+  .page-nav-container::after {
+    top: 0rem;
+    left: 2rem;
+  }
+
+  .page-nav-container::after {
+    transform: rotate(120deg);
+    top: -1rem;
+  }
+
+  .page-nav-container::before {
+    top: -4rem;
   }
 
   .page-nav-container .page-nav-btn {

@@ -30,7 +30,7 @@ header .header-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: var(--margin-y);
+  gap: calc(3* var(--margin-y));
   max-width: 80%;
   margin: 0 auto;
 }
@@ -100,7 +100,7 @@ h1.inactive {
 }
 
 h1.inactive {
-  margin-top: 50%;
+  margin-top: 47%;
 }
 
 h1.inactive[data-middle="true"] {

@@ -7,7 +7,7 @@
       <HamburgerNav :switch-page="switchPage"></HamburgerNav>
     </template>
     <template v-if="isMobile" #hero>
-      <Hero heading="I make amazing interactive web experiences" button-text="Book Me"
+      <Hero heading="I make amazing interactive web experiences" button-text="Contact"
         subheading="Lets talk about your next project">
         <template #static-bg>
           <StaticNavSvg />
@@ -18,7 +18,7 @@
       <section class="anim-to-nav">
         <AnimationWrapper :showHero="showHero" :switch-to-layer="switchToLayer" :hover-layer-active="hoverLayerActive">
           <template #hero>
-            <Hero heading="I make amazing interactive web experiences" button-text="Book Me"
+            <Hero heading="I make amazing interactive web experiences" button-text="Contact"
               subheading="Lets talk about your next project in..." />
           </template> <template #sub-nav>
             <SubNav :slide="slide" :hovered-layer="hoveredLayer" :active-layer="activeLayer" />
@@ -115,6 +115,8 @@ export default {
       this.hoveredLayer = "default";
 
       const headerH1 = document.querySelector("header h1");
+      const nav = document.querySelector(".page-nav-container");
+      nav.className = "page-nav-container";
       headerH1.dataset.middle = false;
     })
   },
@@ -155,7 +157,7 @@ export default {
       )
 
       this.hoveredLayer = layerName
-      subNav.className = 'page-nav-container ' + layerName
+      subNav.className = 'page-nav-container hovered ' + layerName
     },
 
     slide(direction, articleName, event = null) {

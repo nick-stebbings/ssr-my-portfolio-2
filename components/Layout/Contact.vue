@@ -61,7 +61,7 @@ button#return-home {
   color: white;
   border: 0;
   display: flex;
-  margin-top: var(--margin-y);
+  margin-top: calc(2*var(--margin-y));
   justify-content: flex-end;
   position: absolute;
   right: var(--margin-x);

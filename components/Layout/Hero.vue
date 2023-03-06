@@ -141,7 +141,7 @@ div.hero-container>div:first-child {
   position: absolute;
   bottom: 0;
   left: 0;
-  /* margin-right: -1rem; */
+  z-index: 50;
   padding: var(--margin-y) 0;
 }
 
@@ -190,6 +190,12 @@ div.hero-container>div:first-child {
     display: flex;
   }
 
+  .hero-container {
+    opacity: 0;
+    visibility: hidden;
+    transition: .15s all ease-in;
+  }
+
 }
 
 @media (min-width: 768px) {
@@ -201,6 +207,7 @@ div.hero-container>div:first-child {
 
 
 @media (min-width: 1280px) {
+
   div.container-fluid {
     padding: 0 var(--margin-x) 0 var(--header-left);
   }
@@ -214,6 +221,11 @@ div.hero-container>div:first-child {
     position: relative;
   }
 
+  h2.hero-subheader {
+    text-align: left;
+    margin-right: auto;
+  }
+
   .cta-btns {
     display: flex;
     gap: var(--gutter-x);
@@ -223,10 +235,11 @@ div.hero-container>div:first-child {
   }
 
   .icons {
-    bottom: calc(var(--hero-height) - 2rem);
-    left: var(--header-left);
-    right: var(--margin-x);
+    bottom: 50%;
+    right: 0;
+    flex-direction: column;
     height: 12rem;
+    gap: 1rem;
     justify-content: center;
     margin: 0 auto 2.25rem auto;
   }
@@ -265,12 +278,13 @@ div.hero-container>div:first-child {
   }
 }
 
-@media (min-width: 1680px) {
-  .hero-container {
-    opacity: 0;
-    visibility: hidden;
-    transition: .15s all ease-in;
+@media (max-height: 768px) {
+  .cta-btns {
+    margin: 12rem auto !important;
   }
+}
+
+@media (min-width: 1680px) {
 
   div.hero-container>div:first-child {
     padding: var(--margin-y) calc(var(--margin-x) + 4rem) 0 4rem;
@@ -289,6 +303,19 @@ div.hero-container>div:first-child {
 
   h2.hero-subheader {
     font-size: 2.5rem;
+  }
+}
+
+/* Short viewport */
+@media (max-height: 1280px) {
+  .icons {
+    bottom: calc(var(--hero-height) - 2rem);
+    left: var(--header-left);
+    right: var(--margin-x);
+    height: 12rem;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto 2.25rem auto;
   }
 }
 </style>
