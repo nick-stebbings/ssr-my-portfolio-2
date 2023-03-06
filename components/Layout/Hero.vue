@@ -279,10 +279,16 @@ div.hero-container>div:first-child {
   max-width: 93vw;
 }
 
-@media (max-height: 768px) {
-  .cta-btns {
-    margin: 12rem auto !important;
+@media (max-height: 640px) {
+  h1.hero-header {
+    font-size: 3rem;
+    padding-left: 25%;
+    margin-top: -3rem
   }
+
+  /* .cta-btns {
+    margin: 12rem auto !important;
+  } */
 }
 
 /* Short viewport */
