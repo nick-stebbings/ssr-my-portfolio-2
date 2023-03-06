@@ -287,7 +287,7 @@ div.hero-container>div:first-child {
   }
 }
 
-@media (max-height: 640px) {
+@media (max-height: 675px) {
   h1.hero-header {
     font-size: 3rem;
     padding-left: 25%;
