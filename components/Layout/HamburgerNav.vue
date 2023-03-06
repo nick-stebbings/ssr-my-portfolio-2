@@ -110,6 +110,7 @@ export default {
     background: transparent;
     border: 0;
     transform: scale(1.5);
+    transition: all 0.3s ease-in-out;
   }
 
 

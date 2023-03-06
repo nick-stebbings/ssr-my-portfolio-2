@@ -82,7 +82,7 @@ export default {
   },
   computed: {
     isMobile() {
-      return (this.$device.isMobile || this.$device.isTablet)
+      return (this.$device.isMobileOrTablet)
     },
     isDesktop() {
       return (this.$device.isDesktop)

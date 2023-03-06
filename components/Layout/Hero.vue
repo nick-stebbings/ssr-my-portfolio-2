@@ -3,7 +3,10 @@
     <div>
       <h1 class="hero-header">{{ heading }}</h1>
       <h2 class="hero-subheader">{{ subheading }}</h2>
-      <a href="#contact" class="btn btn-primary btn-lg">{{ buttonText }}</a>
+      <div>
+        <a href="resume.pdf" target="_blank" class="btn btn-outline-primary btn-lg">Resume</a>
+        <a href="#contact" class="btn btn-primary btn-lg">{{ buttonText }}</a>
+      </div>
     </div>
     <slot name="static-bg"></slot>
     <div class='icons'>
@@ -142,7 +145,9 @@ div.hero-container>div:first-child {
   padding: var(--margin-y) 0;
 }
 
-.icon-label {
+.icon-label,
+.icon-link {
+  margin: 0;
   text-align: center;
 }
 
@@ -150,8 +155,7 @@ div.hero-container>div:first-child {
   text-align: center;
 }
 
-.icon-container:nth-child(2n),
-.icon-label {
+.icon-container:nth-child(2n) {
   display: none;
 }
 
@@ -174,6 +178,27 @@ div.hero-container>div:first-child {
 .icon-container:hover {
   color: black;
 }
+
+@media (min-width: 400px) {
+  .icons {
+    right: 0;
+    left: initial;
+  }
+
+  .icon-container:nth-child(2n),
+  .icon-label {
+    display: flex;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .icons {
+    bottom: 4rem;
+    left: 50%;
+  }
+}
+
 
 @media (min-width: 1280px) {
   div.container-fluid {

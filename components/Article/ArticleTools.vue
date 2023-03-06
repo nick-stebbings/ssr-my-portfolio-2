@@ -124,10 +124,10 @@ section.article-tools .tools-content {
 
 section.article-tools h2 {
   color: #3c3c3c;
-  font-family: 'Ropa Sans', 'Roboto', 'Arial', sans-serif;
+  font-family: 'Rubik', 'Roboto', 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  font-weight: 500;
+  font-weight: 200;
   width: 100%;
   font-size: 1.5em;
   text-align: center;
@@ -267,7 +267,8 @@ section.article-tools .tools-content ul li {
   }
 
   section.article-tools .tools-titles h2 {
-    margin: 1.5rem 0 0 0;
+    margin: 1.5rem .5rem 0 0;
+    font-size: 1em;
     flex-basis: 3rem;
     text-align: left;
   }

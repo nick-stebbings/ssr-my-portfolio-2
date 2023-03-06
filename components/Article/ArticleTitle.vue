@@ -44,7 +44,7 @@ header.article-title.right {
 }
 
 .case-study header.article-title h1 {
-  font-family: 'Ropa Sans', 'Roboto', 'Arial', sans-serif;
+  font-family: 'Rubik', 'Roboto', 'Arial', sans-serif;
 }
 
 .case-study header.active.article-title::before {
@@ -113,7 +113,7 @@ header.article-title h1 {
 }
 
 .case-study .article-title h1 {
-  font-size: 2.25em;
+  font-size: 1.25em;
   font-weight: 500;
 }
 
@@ -146,6 +146,7 @@ header.article-title.right h2::before {
 
 .case-study .article-title.right h2::before {
   background-position: right;
+  background-size: 75%;
 }
 
 header.article-title h2 {

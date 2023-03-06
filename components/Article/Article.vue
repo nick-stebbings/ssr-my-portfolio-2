@@ -46,6 +46,7 @@ export default {
     const expandCaseStudy = document.querySelector('.case-study')
     const expandCaseStudyBtns = document.querySelectorAll('.case-study header')
     const carouselCaseStudies = document.querySelectorAll('.carousel.slide')
+    console.log('expandCaseStudy :>> ', expandCaseStudy);
 
     expandCaseStudyBtns.forEach((btn, i) => {
       btn.addEventListener('click', () => {
@@ -145,10 +146,6 @@ article .article-tools {
 
 .article.para {
   display: flex;
-}
-
-.article-section.para:nth-of-type(2n+ 1) {
-  flex-direction: row-reverse;
 }
 
 @media only screen and (max-width: 1280px) {

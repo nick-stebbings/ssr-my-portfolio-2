@@ -95,6 +95,10 @@ section.page:nth-of-type(2n + 1) article section.summary.article-section {
   flex-direction: row-reverse;
 }
 
+section .article-section:not(.summary) {
+  flex-direction: column;
+}
+
 .page article .article-section.para {
   flex-direction: column !important;
 }
@@ -111,7 +115,8 @@ section.page:nth-of-type(2n + 1) article section.summary.article-section .copy {
   color: #3c3c3c;
   font-size: 1rem;
   letter-spacing: 1px;
-  font-family: 'Ropa Sans', 'Roboto', 'Arial', sans-serif;
+  margin-bottom: var(--margin-y);
+  font-family: 'Rubik', 'Roboto', 'Arial', sans-serif;
 }
 
 .article-section .figure img {
@@ -164,9 +169,11 @@ main>section[data-active='false'] img {
   section.article-section .image img {
     max-height: 30vh;
   }
-}
 
-@media (min-width: 768px) {}
+  section .article-section:not(.summary) {
+    flex-direction: row;
+  }
+}
 
 @media (min-width: 1280px) {
   p {

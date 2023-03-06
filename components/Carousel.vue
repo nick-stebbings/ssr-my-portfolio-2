@@ -62,7 +62,7 @@ export default {
 
 .case-study.active .carousel-control-prev,
 .case-study.active .carousel-control-next {
-  top: -3.5rem;
+  top: .5rem;
   display: block;
 }
 
@@ -113,6 +113,10 @@ export default {
   left: 0;
 }
 
+.case-study>.article-title.active h1 {
+  padding-right: 0
+}
+
 .carousel-indicators button {
   display: flex;
   align-items: center;
@@ -130,5 +134,20 @@ export default {
   padding: 0;
   background-color: #846b63;
   opacity: 0.5;
+}
+
+@media only screen and (max-height: 550px) {
+
+  .case-study .carousel-control-prev {
+    left: 0;
+    bottom: 50%;
+    top: initial !important
+  }
+
+  .case-study .carousel-control-next {
+    left: 0;
+    bottom: 40%;
+    top: initial !important;
+  }
 }
 </style>

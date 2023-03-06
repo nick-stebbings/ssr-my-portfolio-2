@@ -64,7 +64,7 @@ export default {
           'This small app stemmed from a project in the Launch School back-end syllabus which focused on persistence with local storage and rendering with the ERB template language.\\r\\n\\r\\nThis was my first attempt at building a basic interface for the visualisation of personal habits using multi-level structures. I decided to use a hierarchy of triangles, attempting to make 3 levels that could stack on top of the other. I had some success but relied on monkey-patching of the SwiperJS API which quickly became unmanageable.',
         imgPath: 'pyramid.png',
       },
-      libs: ['jQuery Swiper', 'Bootstrap 4', 'FlatUI', 'Sinatra', 'ERB'],
+      libs: ['jQuery', 'Bootstrap 4', 'FlatUI', 'Sinatra', 'ERB'],
       langs: ['HTML', 'CSS', 'JavaScript', 'Ruby'],
       demoUrl: 'https://habit-triangles.herokuapp.com/',
       codebaseUrl: 'https://github.com/nick-stebbings/habit_triangles',
@@ -73,7 +73,7 @@ export default {
       articles: [
         {
           paragraphs:
-            'I drew inspiration from a Mathematics and fractal geometry. Check out this cool 3d version: https://www.reddit.com/r/woahdude/comments/hsu3f3/delightful_fractal_triangles/',
+            'I drew inspiration from a Mathematics and fractal geometry.',
           imgPath: 'screens/happy-triangles.jpg',
           imgCaption:
             'My first attempt at visualising habits used a pyramid of triangles',

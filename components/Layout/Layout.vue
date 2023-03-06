@@ -38,7 +38,7 @@ body,
 :root {
   --hero-height: 90vh;
   --hero-top-margin: 0;
-  --margin-x: 1rem;
+  --margin-x: .75rem;
   --gutter-x: 1rem;
   --gutter-x-right: 1rem;
   --margin-y: 1.5rem;
@@ -73,12 +73,13 @@ body,
 }
 
 .layout {
-  /* width: 100vw; */
+  max-width: 100vw;
+  overflow-x: hidden;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: stretch;
-  gap: calc(2*var(--margin-x));
+  gap: var(--margin-x);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -153,8 +154,16 @@ button#skip-intro:hover {
 }
 
 @media (min-width: 480px) {
+  :root {
+    --margin-x: 1rem;
+  }
+
   h1.hero-header {
     margin-left: 25%;
+  }
+
+  .case-study-car {
+    margin-top: -.5rem
   }
 }
 
@@ -169,7 +178,7 @@ button#skip-intro:hover {
     /* --h1-margin: 3rem 0 2rem;
     */
     --h2-margin: 2.5rem;
-    --hero-height: 60vh;
+    --hero-height: 90vh;
   }
 
   h1.hero-header {
@@ -216,6 +225,12 @@ button#skip-intro:hover {
     /* margin-top: 24rem; */
     margin-top: 0rem;
     transition: 1s all ease-out;
+  }
+}
+
+@media only screen and (max-height: 550px) {
+  :root {
+    --hero-height: 250vh;
   }
 }
 
