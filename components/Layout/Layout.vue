@@ -87,6 +87,11 @@ body,
   right: 0;
 }
 
+html {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 85%, rgba(60, 60, 60, 1) 80%);
+}
+
 main>* {
   flex: 1 0 100%;
   margin: 0;

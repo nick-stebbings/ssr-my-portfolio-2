@@ -104,6 +104,11 @@ export default {
   margin-left: 5rem;
 }
 
+.case-study h1 {
+  font-weight: 300;
+  font-size: 1.5;
+}
+
 .case-study>header.active+.carousel {
   overflow: initial;
   margin-left: 0;

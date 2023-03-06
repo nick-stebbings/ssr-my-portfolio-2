@@ -1,6 +1,5 @@
 <template>
-  <div>
-
+  <div class="modal-container">
     <b-modal id="modal-1" title="Confirmation">
       <p class="my-4">Contact has been made!</p>
     </b-modal>
@@ -25,3 +24,8 @@
     </div>
   </div> -->
 </template>
+<style scoped>
+.modal-container {
+  display: contents;
+}
+</style>
