@@ -79,7 +79,7 @@ body,
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: stretch;
-  gap: var(--margin-x);
+  /* gap: var(--margin-x); */
   position: absolute;
   top: 0;
   bottom: 0;
