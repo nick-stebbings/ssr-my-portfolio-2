@@ -181,7 +181,7 @@ button#skip-intro:hover {
     /* --h1-margin: 3rem 0 2rem;
     */
     --h2-margin: 2.5rem;
-    --hero-height: 90vh;
+    --hero-height: 95vh;
   }
 
   h1.hero-header {

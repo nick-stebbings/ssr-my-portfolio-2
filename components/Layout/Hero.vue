@@ -144,6 +144,7 @@ div.hero-container>div:first-child {
   z-index: 50;
   padding: var(--margin-y) 0;
   bottom: -4rem;
+  gap: 0;
 }
 
 .icon-label,
@@ -156,7 +157,8 @@ div.hero-container>div:first-child {
   text-align: center;
 }
 
-.icon-container:nth-child(2n) {
+.icon-container:nth-child(2n),
+.icon-label {
   display: none;
 }
 
@@ -167,20 +169,38 @@ div.hero-container>div:first-child {
 
 .icon-container {
   color: #3c3c3c;
-  justify-content: flex-end;
   align-items: flex-end;
   display: flex;
-  padding: 0 var(--gutter-x);
+  padding: 0;
+  justify-content: flex-start;
 }
 
 .icon-container:hover {
   color: black;
 }
 
-@media (min-width: 400px) {
+.icons {
+  /* bottom: 50%; */
+  right: 0;
+  flex-direction: column;
+  height: 12rem;
+  gap: 0.2rem;
+  justify-content: center;
+  margin: 0 auto 2.25rem auto;
+  max-width: 93vw;
+}
+
+@media (min-width: 410px) {
   .icons {
     right: 0;
-    left: initial;
+    left: 0;
+    gap: var(--gutter-x);
+    flex-direction: row;
+  }
+
+  .icon-container {
+    justify-content: flex-end;
+    padding: 0 .5rem;
   }
 
   .icon-container:nth-child(2n),
@@ -200,7 +220,6 @@ div.hero-container>div:first-child {
 
 
 @media (min-width: 1280px) {
-
   div.container-fluid {
     padding: 0 var(--margin-x) 0 var(--header-left);
   }
@@ -267,18 +286,6 @@ div.hero-container>div:first-child {
   }
 }
 
-
-.icons {
-  /* bottom: 50%; */
-  right: 0;
-  flex-direction: column;
-  height: 12rem;
-  gap: 1rem;
-  justify-content: center;
-  margin: 0 auto 2.25rem auto;
-  max-width: 93vw;
-}
-
 @media (max-height: 640px) {
   h1.hero-header {
     font-size: 3rem;
@@ -292,16 +299,17 @@ div.hero-container>div:first-child {
 }
 
 /* Short viewport */
-@media screen and (max-height: 1280px),
-screen and (min-width:1280px) {
-  .icons {
-    /* bottom: calc(var(--hero-height) - 2rem); */
-    left: var(--header-left);
-    right: var(--margin-x);
-    height: 12rem;
-    flex-direction: row;
-    justify-content: center;
-    margin: 0 auto 2.25rem auto;
+@media screen and (max-height: 1280px) {
+  @media screen and (min-width:1280px) {
+    .icons {
+      /* bottom: calc(var(--hero-height) - 2rem); */
+      left: var(--header-left);
+      right: var(--margin-x);
+      height: 12rem;
+      flex-direction: row;
+      justify-content: center;
+      margin: 0 auto 2.25rem auto;
+    }
   }
 }
 
