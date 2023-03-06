@@ -322,6 +322,14 @@ div.hero-container>div:first-child {
     flex-direction: column;
   }
 
+  .icons .icon-container a svg {
+    transition: all .3s ease-in;
+  }
+
+  .icons .icon-container:hover a svg {
+    transform: scale(2);
+  }
+
   div.hero-container>div:first-child {
     padding: var(--margin-y) calc(var(--margin-x) + 4rem) 0 4rem;
     display: flex;
