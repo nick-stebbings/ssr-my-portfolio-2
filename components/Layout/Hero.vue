@@ -3,7 +3,7 @@
     <div>
       <h1 class="hero-header">{{ heading }}</h1>
       <h2 class="hero-subheader">{{ subheading }}</h2>
-      <div>
+      <div class="cta-btns">
         <a href="resume.pdf" target="_blank" class="btn btn-outline-primary btn-lg">Resume</a>
         <a href="#contact" class="btn btn-primary btn-lg">{{ buttonText }}</a>
       </div>
@@ -214,6 +214,27 @@ div.hero-container>div:first-child {
     position: relative;
   }
 
+  .cta-btns {
+    display: flex;
+    gap: var(--gutter-x);
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .icons {
+    bottom: calc(var(--hero-height) - 2rem);
+    left: var(--header-left);
+    right: var(--margin-x);
+    height: 12rem;
+    justify-content: center;
+    margin: 0 auto 2.25rem auto;
+  }
+
+  .icon-label {
+    font-size: 1rem;
+  }
+
   h1.hero-header::after,
   h1.hero-header::before {
     position: absolute;
@@ -235,11 +256,9 @@ div.hero-container>div:first-child {
   }
 
   h1.hero-header::before {
-
     content: 'navigate';
     text-transform: capitalize;
   }
-
 
   h2.lead {
     font-size: 2rem;

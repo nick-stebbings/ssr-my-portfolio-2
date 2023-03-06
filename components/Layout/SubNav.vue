@@ -126,6 +126,34 @@ header.inactive+.page-nav-container .page-nav-btn {
   background: url('~/assets/images/icons/veg-icon.png') no-repeat center/contain;
 }
 
+
+.page-nav-container::before,
+.page-nav-container::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4rem;
+  width: 4rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0069d9;
+}
+
+.page-nav-container::before,
+.page-nav-container::after {
+  content: 'Click';
+  left: -20%;
+  top: -3rem;
+  text-transform: capitalize;
+}
+
+.page-nav-container::after {
+  content: '->';
+  transform: rotate(90deg);
+  top: 0;
+  text-transform: capitalize;
+}
+
 /* Short viewport */
 @media (max-height: 1280px) {
   .page-nav-container {

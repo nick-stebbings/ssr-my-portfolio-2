@@ -160,14 +160,28 @@ export default {
 
     slide(direction, articleName, event = null) {
       if (
+        direction == 'top'
+      ) {
+        document.querySelector('.layout').scrollTop = 0;
+
+        window.location.replace("#");
+
+        // slice off the remaining '#' in HTML5:    
+        if (typeof window.history.replaceState == 'function') {
+          history.replaceState({}, '', window.location.href.slice(0, -1));
+        }
+        return
+      }
+      if (
         event &&
         event.target.parentNode.previousElementSibling.classList.contains(
           'inactive'
         )
       )
         return
-      // if in hover state, change layer
 
+      // if in hover state, change layer
+      // debugger;
       switch (articleName) {
         case 'bookme':
           const form = document.getElementById('contact-wrapper')
@@ -189,20 +203,6 @@ export default {
           const page4 = document.getElementById('section-3')
           page4.scrollIntoView()
           break
-      }
-
-      if (direction == 'top') {
-        // remove fragment as much as it can go without adding an entry in browser history:
-        window.location.replace("#");
-
-        // slice off the remaining '#' in HTML5:    
-        if (typeof window.history.replaceState == 'function') {
-          history.replaceState({}, '', window.location.href.slice(0, -1));
-        }
-      }
-      if (direction == 'top' && this.$device.isDesktop) {
-        const page0 = document.querySelector('.layout')
-        page0.scrollIntoView()
       }
     },
 

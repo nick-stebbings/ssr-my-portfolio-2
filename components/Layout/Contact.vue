@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     scrollHome: function () {
-      document.querySelector('.layout').scrollIntoView();
+      document.querySelector('.layout').scrollTop = 0;
     }
   },
   components: {
