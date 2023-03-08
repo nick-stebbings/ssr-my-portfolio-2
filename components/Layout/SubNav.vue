@@ -142,15 +142,16 @@ header.inactive+.page-nav-container .page-nav-btn {
 .page-nav-container::before,
 .page-nav-container::after {
   content: 'Navigate';
-  left: -15%;
-  top: -1rem;
+  left: -25%;
+  top: 2rem;
   text-transform: capitalize;
 }
 
 .page-nav-container::after {
   content: '->';
   transform: rotate(45deg);
-  top: 2rem;
+  top: 6rem;
+  left: -15%;
   text-transform: capitalize;
 }
 

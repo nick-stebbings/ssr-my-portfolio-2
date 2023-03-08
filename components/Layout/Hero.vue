@@ -4,7 +4,7 @@
       <h1 class="hero-header">{{ heading }}</h1>
       <h2 class="hero-subheader">{{ subheading }}</h2>
       <div class="cta-btns">
-        <a href="resume.pdf" target="_blank" class="btn btn-outline-primary btn-lg">Resume</a>
+        <a href="resume.pdf" target="_blank" class="btn btn-outline-primary btn-lg">Résumé</a>
         <a href="#contact" class="btn btn-primary btn-lg">{{ buttonText }}</a>
       </div>
     </div>
@@ -250,7 +250,7 @@ div.hero-container>div:first-child {
     gap: var(--gutter-x);
     align-items: center;
     width: 50%;
-    margin: 0 auto;
+    margin: 6rem auto;
   }
 
   .icon-label {
@@ -260,7 +260,7 @@ div.hero-container>div:first-child {
   h1.hero-header::after,
   h1.hero-header::before {
     position: absolute;
-    top: 75%;
+    top: 85%;
     left: -20rem;
     height: 4rem;
     width: 4rem;
@@ -273,7 +273,7 @@ div.hero-container>div:first-child {
     content: '->';
     transform: rotate(90deg);
     left: -18rem;
-    top: 90%;
+    top: 110%;
     text-transform: capitalize;
   }
 

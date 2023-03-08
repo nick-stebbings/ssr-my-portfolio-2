@@ -7,7 +7,7 @@
       <HamburgerNav :switch-page="switchPage"></HamburgerNav>
     </template>
     <template v-if="isMobile" #hero>
-      <Hero heading="I make amazing interactive web experiences" button-text="Contact"
+      <Hero heading="I create innovative web solutions" button-text="Contact"
         subheading="Lets talk about your next project">
         <template #static-bg>
           <StaticNavSvg />
@@ -18,7 +18,7 @@
       <section class="anim-to-nav">
         <AnimationWrapper :showHero="showHero" :switch-to-layer="switchToLayer" :hover-layer-active="hoverLayerActive">
           <template #hero>
-            <Hero heading="I make amazing interactive web experiences" button-text="Contact"
+            <Hero heading="I create innovative web solutions" button-text="Contact"
               subheading="Lets talk about your next project in..." />
           </template> <template #sub-nav>
             <SubNav :slide="slide" :hovered-layer="hoveredLayer" :active-layer="activeLayer" />

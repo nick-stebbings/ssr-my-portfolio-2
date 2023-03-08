@@ -100,7 +100,7 @@ h1.inactive {
 }
 
 h1.inactive {
-  margin-top: 47%;
+  margin-top: 42%;
 }
 
 h1.inactive[data-middle="true"] {

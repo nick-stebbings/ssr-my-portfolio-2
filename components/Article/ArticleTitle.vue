@@ -97,7 +97,8 @@ header.article-title.left h2 {
 
 header.article-title.right h1,
 header.article-title.right h2 {
-  /* margin: 1rem 0 0 0; */
+  font-weight: 300;
+  font-size: 1.5em;
   text-align: right;
 }
 
@@ -176,6 +177,10 @@ header.article-title.left h2 {
     background-position: right;
   }
 
+  header.article-title.right:not(.active) h2 {
+    height: 1rem;
+  }
+
   header.article-title.right h1,
   header.article-title.right h2 {
     padding-right: 0;
@@ -191,7 +196,7 @@ header.article-title.left h2 {
 
   header.article-title.right h1,
   header.article-title.right h2 {
-    padding-right: var(--gutter-x);
+    /* padding-right: var(--gutter-x); */
     margin: 0;
   }
 
