@@ -110,7 +110,7 @@ header.article-title h1 {
   font-size: 1.5em;
   line-height: var(--h1-line-height);
   margin-bottom: 0.75rem;
-  width: 100vw;
+  width: 100%;
 }
 
 .case-study .article-title h1 {

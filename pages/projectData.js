@@ -85,7 +85,7 @@ export default {
   ],
   web3: [
     {
-      title: 'Habit/Fract (for Holochain)',
+      title: 'Habit/Fract',
       subtitle: 'a social, fractal, atomic habit tracker',
       summary: {
         paragraphs:
