@@ -346,9 +346,9 @@ div.hero-container>div:first-child {
 
 @media (max-height: 1024px) {
   .icons {
-    right: 4rem;
+    right: 0;
     left: initial;
-    top: 6rem;
+    top: 8rem;
     transform: scale(0.75);
     flex-direction: column;
   }
