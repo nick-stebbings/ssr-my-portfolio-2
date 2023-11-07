@@ -250,7 +250,7 @@ div.hero-container>div:first-child {
     gap: var(--gutter-x);
     align-items: center;
     width: 50%;
-    margin: 9rem 33% 8rem auto;
+    margin: 22vh 33% 8rem auto;
   }
 
   .icon-label {
