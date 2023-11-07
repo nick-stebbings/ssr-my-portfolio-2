@@ -559,12 +559,12 @@ export default {
       const hero = document.querySelector(".hero-container");
       if (!hero) return;
 
-      hero.style.visibility = 'hidden'
-      hero.style.opacity = '0'
+      // hero.style.visibility = 'hidden'
+      // hero.style.opacity = '0'
 
 
-      const headerH1 = document.querySelector("header h1");
-      headerH1.dataset.middle = true;
+      // const headerH1 = document.querySelector("header h1");
+      // headerH1.dataset.middle = true;
     }
 
     const makeLayer1Active = () => {
