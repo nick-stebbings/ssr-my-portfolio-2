@@ -313,16 +313,6 @@ div.hero-container>div:first-child {
     }
   }
 }
-
-@media (max-height: 1024px) {
-  .icons {
-    right: 4rem;
-    left: initial;
-    top: 6rem;
-    transform: scale(0.75);
-    flex-direction: column;
-  }
-}
 @media (min-width: 1680px) {
   .icons {
     left: 44%;
@@ -351,6 +341,16 @@ div.hero-container>div:first-child {
 
   h2.hero-subheader {
     font-size: 2.5rem;
+  }
+}
+
+@media (max-height: 1024px) {
+  .icons {
+    right: 4rem;
+    left: initial;
+    top: 6rem;
+    transform: scale(0.75);
+    flex-direction: column;
   }
 }
 </style>
