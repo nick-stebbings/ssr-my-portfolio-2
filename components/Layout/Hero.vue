@@ -318,7 +318,8 @@ div.hero-container>div:first-child {
   .icons {
     right: 4rem;
     left: initial;
-    top: calc(50% - 12rem);
+    top: 6rem;
+    transform: scale(0.75);
     flex-direction: column;
   }
 }
