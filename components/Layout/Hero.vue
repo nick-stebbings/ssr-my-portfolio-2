@@ -324,7 +324,7 @@ div.hero-container>div:first-child {
 }
 @media (min-width: 1680px) {
   .icons {
-    left: 46%;
+    left: 44%;
     right: auto;
     bottom: 1rem;
   }
@@ -344,7 +344,7 @@ div.hero-container>div:first-child {
   }
 
   a {
-    margin: calc(7*var(--margin-y)) auto 0 auto;
+    margin: 0;
     font-size: 3rem;
   }
 

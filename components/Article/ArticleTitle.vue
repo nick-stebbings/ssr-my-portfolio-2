@@ -77,10 +77,9 @@ header.article-title.right {
 header.article-title h1,
 header.article-title h2 {
   font-family: 'Merriweather', 'Georgia', serif;
-  /* margin: 0; */
   padding: 0;
   font-weight: 500;
-  width: 100%;
+  width: 100vw;
 }
 
 header.article-title.left {
