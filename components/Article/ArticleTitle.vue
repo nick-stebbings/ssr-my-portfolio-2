@@ -79,7 +79,7 @@ header.article-title h2 {
   font-family: 'Merriweather', 'Georgia', serif;
   padding: 0;
   font-weight: 500;
-  width: 100vw;
+  width: 100%;
 }
 
 header.article-title.left {
@@ -110,6 +110,7 @@ header.article-title h1 {
   font-size: 1.5em;
   line-height: var(--h1-line-height);
   margin-bottom: 0.75rem;
+  width: 100vw;
 }
 
 .case-study .article-title h1 {
