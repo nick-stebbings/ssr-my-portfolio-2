@@ -250,7 +250,7 @@ div.hero-container>div:first-child {
     gap: var(--gutter-x);
     align-items: center;
     width: 50%;
-    margin: 6rem auto;
+    margin: 9rem 33% 8rem auto;
   }
 
   .icon-label {
@@ -314,12 +314,19 @@ div.hero-container>div:first-child {
   }
 }
 
-@media (min-width: 1680px) {
+@media (max-height: 1024px) {
   .icons {
     right: 4rem;
     left: initial;
     top: calc(50% - 12rem);
     flex-direction: column;
+  }
+}
+@media (min-width: 1680px) {
+  .icons {
+    left: 46%;
+    right: auto;
+    bottom: 1rem;
   }
 
   .icons .icon-container a svg {
@@ -339,10 +346,6 @@ div.hero-container>div:first-child {
   a {
     margin: calc(7*var(--margin-y)) auto 0 auto;
     font-size: 3rem;
-  }
-
-  h1.hero-header {
-    font-size: 5rem;
   }
 
   h2.hero-subheader {
