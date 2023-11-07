@@ -105,7 +105,8 @@ h1.inactive {
 
 h1.inactive[data-middle="true"] {
   margin-top: 33%;
-  font-size: 10rem;
+  font-size: 8rem;
+  padding-left: 4rem;
 }
 
 h2.inactive,
