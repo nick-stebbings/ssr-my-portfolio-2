@@ -250,7 +250,7 @@ div.hero-container>div:first-child {
     gap: var(--gutter-x);
     align-items: center;
     width: 50%;
-    margin: 22vh 33% 8rem auto;
+    margin: 26vh 33% 8rem auto;
   }
 
   .icon-label {
@@ -317,7 +317,7 @@ div.hero-container>div:first-child {
   .icons {
     left: 44%;
     right: auto;
-    bottom: 1rem;
+    bottom: -1rem;
   }
 
   .icons .icon-container a svg {
