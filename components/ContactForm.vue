@@ -1,6 +1,6 @@
 <template>
   <form name="contact-form" method="POST" action="https://api.web3forms.com/submit" @submit="handleSubmit">
-    <input type="hidden" name="access_key" value="3b1f2606-e4c4-4a19-87ae-4e19878c66f8">
+    <input type="hidden" name="access_key" id="key">
     <div class="form-row">
       <div class="form-group">
         <label for="name">Your Name</label>
@@ -24,6 +24,8 @@
   </form>
 </template>
 <script setup>
+document.getElementById('key').value = process.env.WEBFORM; 
+
 function handleSubmit(e) {
   const form = e.currentTarget;
   const modalTitle = document.querySelector(".modal-title");
