@@ -27,12 +27,13 @@
 
 function handleSubmit(e) {
   const form = e.currentTarget;
-  form.getElementById('key').value = this.$config.webform; 
   const modalTitle = document.querySelector(".modal-title");
   const modalBody = document.querySelector(".modal-body");
   const modalButton = document.querySelector(".modal-footer button");
   e.preventDefault();
   const formData = new FormData(form);
+  formData.set('access_key', this.$config.webform)
+  console.log(formData, process.env); 
   const object = Object.fromEntries(formData);
   const json = JSON.stringify(object);
   fetch("https://api.web3forms.com/submit", {
@@ -54,10 +55,11 @@ function handleSubmit(e) {
         modalTitle.innerHTML = 'There was an error!';
         modalBody.innerHTML = 'Please try again, or email me directly at N dot STEBBINGS at GMAIL dot COM. Cheers!';
         modalButton.classList.add("btn-warning")
+        throw new Error;
       }
     })
     .catch((error) => {
-      console.log(error);
+      // console.log(error);
       modalTitle.innerHTML = 'There was an error!';
       modalBody.innerHTML = 'Please try again, or email me directly at N dot STEBBINGS at GMAIL dot COM. Cheers!';
       modalButton.classList.add("btn-danger")
