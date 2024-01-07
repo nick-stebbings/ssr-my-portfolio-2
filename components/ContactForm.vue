@@ -32,8 +32,8 @@ function handleSubmit(e) {
   const modalButton = document.querySelector(".modal-footer button");
   e.preventDefault();
   const formData = new FormData(form);
-  console.log(formData, process.env.WEBFORM); 
-  // formData.set('access_key', this.$config.webform)
+  // console.log(formData, process.env.WEBFORM); 
+  formData.set('access_key', '3b1f2606-e4c4-4a19-87ae-4e19878c66f8')
   const object = Object.fromEntries(formData);
   const json = JSON.stringify(object);
   fetch("https://api.web3forms.com/submit", {
