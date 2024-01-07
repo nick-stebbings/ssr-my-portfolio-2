@@ -24,10 +24,11 @@
   </form>
 </template>
 <script setup>
-document.getElementById('key').value = process.env.WEBFORM; 
 
 function handleSubmit(e) {
   const form = e.currentTarget;
+  console.log('form.getElementById('key').value :>> ', form.getElementById('key').value);
+  form.getElementById('key').value = process.env.WEBFORM; 
   const modalTitle = document.querySelector(".modal-title");
   const modalBody = document.querySelector(".modal-body");
   const modalButton = document.querySelector(".modal-footer button");
