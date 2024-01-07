@@ -2,6 +2,9 @@ export default {
   env: {
     WEBFORM: process.env.WEBFORM
   },
+  publicRuntimeConfig: {
+    webform: process.env.WEBFORM
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     css: ['./assets/styles/main.css'],

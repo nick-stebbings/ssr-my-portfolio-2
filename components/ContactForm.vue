@@ -27,8 +27,7 @@
 
 function handleSubmit(e) {
   const form = e.currentTarget;
-  console.log('form.getElementById.value :>> ', process.env);
-  form.getElementById('key').value = process.env.WEBFORM; 
+  form.getElementById('key').value = this.$config.webform; 
   const modalTitle = document.querySelector(".modal-title");
   const modalBody = document.querySelector(".modal-body");
   const modalButton = document.querySelector(".modal-footer button");
