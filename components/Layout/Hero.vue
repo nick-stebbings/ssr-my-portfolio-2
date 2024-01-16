@@ -344,13 +344,11 @@ div.hero-container>div:first-child {
   }
 }
 
-@media (max-height: 1024px) {
+@media (max-height: 768px) {
   .icons {
-    right: 0;
-    left: initial;
-    top: 8rem;
-    transform: scale(0.75);
-    flex-direction: column;
+    left: -8rem;
+    bottom: -5rem;
+    transform: scale(0.5);
   }
 }
 </style>

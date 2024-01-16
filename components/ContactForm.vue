@@ -16,7 +16,7 @@
     <div class="form-row">
       <div class="form-group">
         <label for="inputMessage">Message</label>
-        <input required type="textarea" class="form-control" id="inputMessage" name="message" />
+        <textarea rows="10" required type="textarea" class="form-control" id="inputMessage" name="message" />
       </div>
     </div>
     <button v-b-modal.modal-1 type="submit" class="btn btn-outline-light btn-lg mt-3" data-bs-toggle="modal"
