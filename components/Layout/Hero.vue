@@ -200,7 +200,6 @@ div.hero-container>div:first-child {
 
   .icon-container {
     justify-content: flex-end;
-    padding: 0 .5rem;
   }
 
   .icon-container:nth-child(2n),
@@ -294,9 +293,9 @@ div.hero-container>div:first-child {
     margin-top: -3rem
   }
 
-  /* .cta-btns {
-    margin: 12rem auto !important;
-  } */
+  .icon-container {
+    padding: 0 .5rem;
+  }
 }
 
 /* Short viewport */
